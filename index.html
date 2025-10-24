@@ -1,0 +1,4682 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>杨尚毅 - 药学研究者 | 竞赛达人 | 创新开发者</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ma+Shan+Zheng&family=Noto+Serif+SC:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* 基础样式 */
+        :root {
+            --primary-color: #c53d13;
+            --secondary-color: #d86d4a;
+            --accent-color: #e68c6c;
+            --gradient-start: #c53d13;
+            --gradient-end: #a52d08;
+            --light-color: #f8f4f0;
+            --dark-color: #2c1a0f;
+            --text-color: #3a2a1f;
+            --text-light: #7a6652;
+            --border-radius: 12px;
+            --box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+            --box-shadow-hover: 0 15px 35px rgba(0, 0, 0, 0.15);
+            --transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            --glass-bg: rgba(255, 255, 255, 0.15);
+            --glass-border: rgba(255, 255, 255, 0.25);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Noto Serif SC', 'Inter', serif;
+            line-height: 1.7;
+            color: var(--text-color);
+            background: linear-gradient(135deg, #f8f4f0 0%, #f0e6dc 100%);
+            overflow-x: hidden;
+            position: relative;
+        }
+
+        /* 中国风背景元素 */
+        .chinese-bg-elements {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            pointer-events: none;
+            overflow: hidden;
+        }
+
+        .bg-mountain {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 30%;
+            background: linear-gradient(transparent 0%, rgba(197, 61, 19, 0.03) 100%);
+            clip-path: polygon(0 100%, 100% 100%, 80% 0, 20% 0);
+        }
+
+        .bg-clouds {
+            position: absolute;
+            top: 10%;
+            left: 0;
+            width: 100%;
+            height: 20%;
+            opacity: 0.03;
+            background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 120'%3E%3Cpath fill='%23c53d13' d='M0,64L80,58.7C160,53,320,43,480,48C640,53,800,75,960,74.7C1120,75,1280,53,1360,42.7L1440,32L1440,0L1360,0C1280,0,1120,0,960,0C800,0,640,0,480,0C320,0,160,0,80,0L0,0Z'%3E%3C/path%3E%3C/svg%3E");
+            background-size: cover;
+            animation: float 20s infinite linear;
+        }
+
+        .bg-lotus {
+            position: absolute;
+            bottom: 15%;
+            right: 5%;
+            width: 150px;
+            height: 150px;
+            background: radial-gradient(circle, rgba(197, 61, 19, 0.05) 0%, transparent 70%);
+            border-radius: 50%;
+            animation: rotate 30s infinite linear;
+        }
+
+        .bg-bamboo {
+            position: absolute;
+            bottom: 0;
+            left: 10%;
+            width: 4px;
+            height: 200px;
+            background: linear-gradient(to top, rgba(197, 61, 19, 0.1) 0%, transparent 100%);
+            transform-origin: bottom;
+            animation: sway 8s infinite ease-in-out;
+        }
+
+        .bg-bamboo::before, .bg-bamboo::after {
+            content: '';
+            position: absolute;
+            width: 4px;
+            height: 20px;
+            background: rgba(197, 61, 19, 0.1);
+            left: 0;
+            border-radius: 2px;
+        }
+
+        .bg-bamboo::before {
+            top: 40px;
+            transform: rotate(15deg);
+        }
+
+        .bg-bamboo::after {
+            top: 80px;
+            transform: rotate(-15deg);
+        }
+
+        .bg-ink-wash {
+            position: absolute;
+            top: 20%;
+            left: 5%;
+            width: 300px;
+            height: 300px;
+            background: radial-gradient(ellipse, rgba(197, 61, 19, 0.03) 0%, transparent 70%);
+            border-radius: 50%;
+            filter: blur(20px);
+            animation: pulse 15s infinite alternate;
+        }
+
+        @keyframes float {
+            0% { transform: translateX(-100px); }
+            100% { transform: translateX(100px); }
+        }
+
+        @keyframes rotate {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        @keyframes sway {
+            0%, 100% { transform: rotate(-2deg); }
+            50% { transform: rotate(2deg); }
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); opacity: 0.03; }
+            100% { transform: scale(1.2); opacity: 0.06; }
+        }
+
+        .container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        .section {
+            padding: 120px 0;
+            position: relative;
+        }
+
+        .bg-light {
+            background: linear-gradient(135deg, #ffffff 0%, #f8f4f0 100%);
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 2.8rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            position: relative;
+            font-family: 'Ma Shan Zheng', cursive;
+        }
+
+        .section-subtitle {
+            text-align: center;
+            font-size: 1.3rem;
+            color: var(--text-light);
+            margin-bottom: 60px;
+            font-family: 'Ma Shan Zheng', cursive;
+            font-style: italic;
+        }
+
+        /* 中国风印章样式 */
+        .chinese-seal {
+            display: inline-block;
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            border-radius: 8px;
+            text-align: center;
+            line-height: 50px;
+            font-family: 'Ma Shan Zheng', cursive;
+            font-size: 1.8rem;
+            margin-right: 15px;
+            border: 2px solid #f8d7c2;
+            box-shadow: 0 4px 15px rgba(197, 61, 19, 0.3);
+            transform: rotate(-5deg);
+        }
+
+        /* 3D按钮效果 */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 14px 32px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: var(--transition);
+            border: none;
+            cursor: pointer;
+            font-size: 1rem;
+            position: relative;
+            overflow: hidden;
+            transform-style: preserve-3d;
+            transform: translateZ(0);
+            font-family: 'Inter', sans-serif;
+        }
+
+        .btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+            transition: left 0.5s;
+        }
+
+        .btn:hover::before {
+            left: 100%;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            box-shadow: 0 8px 25px rgba(197, 61, 19, 0.3);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-5px) scale(1.05);
+            box-shadow: 0 15px 35px rgba(197, 61, 19, 0.4);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: var(--primary-color);
+            border: 2px solid var(--primary-color);
+            backdrop-filter: blur(10px);
+        }
+
+        .btn-secondary:hover {
+            background: var(--primary-color);
+            color: white;
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(197, 61, 19, 0.2);
+        }
+
+        /* 导航栏 - 玻璃态效果 */
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(20px);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+            padding: 12px 0;
+            transition: var(--transition);
+        }
+
+        .navbar.scrolled {
+            background: rgba(255, 255, 255, 0.95);
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+        }
+
+        .navbar .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .nav-brand {
+            font-size: 1.8rem;
+            font-weight: 800;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+        }
+
+.nav-menu {
+    display: flex;
+    list-style: none;
+    gap: 4px;
+}
+
+.nav-item {
+    position: relative;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: 500;
+    transition: var(--transition);
+    padding: 8px 16px;
+    border-radius: 25px;
+    position: relative;
+    overflow: hidden;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.95rem;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.nav-link.active {
+    color: var(--primary-color);
+    background: rgba(197, 61, 19, 0.08);
+    font-weight: 600;
+}
+
+.nav-link i {
+    font-size: 0.9rem;
+}
+
+/* 下拉菜单样式 */
+.dropdown {
+    position: relative;
+}
+
+.dropdown-content {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: rgba(255, 255, 255, 0.98);
+    backdrop-filter: blur(20px);
+    min-width: 200px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+    transition: all 0.3s ease;
+    z-index: 1001;
+    padding: 8px 0;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.dropdown:hover .dropdown-content {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.dropdown-content .nav-link {
+    border-radius: 0;
+    padding: 10px 20px;
+    display: block;
+    width: 100%;
+    text-align: left;
+}
+
+.dropdown-content .nav-link:hover {
+    background: rgba(197, 61, 19, 0.1);
+}
+        .nav-menu li a::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(197, 61, 19, 0.1), transparent);
+            transition: left 0.5s;
+        }
+
+        .nav-menu li a:hover::before {
+            left: 100%;
+        }
+
+        .nav-menu li a:hover {
+            color: var(--primary-color);
+            background: rgba(197, 61, 19, 0.05);
+        }
+
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            gap: 4px;
+        }
+
+        .hamburger span {
+            width: 25px;
+            height: 3px;
+            background: var(--text-color);
+            transition: var(--transition);
+            border-radius: 2px;
+        }
+
+        /* 头部区域 - 现代化设计 */
+        .header {
+            padding: 180px 0 120px;
+            background: linear-gradient(135deg, var(--gradient-start) 0%, var(--gradient-end) 100%);
+            color: white;
+            margin-top: 70px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000"><polygon fill="rgba(255,255,255,0.05)" points="0,1000 1000,0 1000,1000"/></svg>');
+            animation: float 6s ease-in-out infinite;
+        }
+
+        .header-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 80px;
+            align-items: center;
+            position: relative;
+            z-index: 2;
+        }
+
+        .header-text h1 {
+            font-size: 3.5rem;
+            font-weight: 800;
+            margin-bottom: 20px;
+            line-height: 1.1;
+            font-family: 'Ma Shan Zheng', cursive;
+        }
+
+        .subtitle {
+            font-size: 1.8rem;
+            margin-bottom: 25px;
+            opacity: 0.9;
+            font-weight: 300;
+        }
+
+        .description {
+            font-size: 1.2rem;
+            margin-bottom: 40px;
+            opacity: 0.9;
+            line-height: 1.6;
+        }
+
+.header-stats {
+    display: flex;
+    gap: 30px;
+    margin: 40px 0;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+
+.stat {
+    text-align: center;
+    position: relative;
+    min-width: 120px;
+}
+
+.stat .number {
+    display: block;
+    font-size: 2.2rem;
+    font-weight: 800;
+    color: white;
+    margin-bottom: 8px;
+    line-height: 1.2;
+}
+
+.stat .label {
+    font-size: 0.95rem;
+    opacity: 0.9;
+    font-weight: 500;
+    line-height: 1.3;
+}
+
+.header-buttons {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+/* 基本信息卡片样式优化 */
+.profile-info h3 {
+    margin-bottom: 20px;
+    color: white;
+    font-size: 1.4rem;
+    text-align: center;
+}
+
+.info-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.info-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    transition: var(--transition);
+}
+
+.info-item:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateX(5px);
+}
+
+.info-item i {
+    font-size: 1.1rem;
+    width: 20px;
+    text-align: center;
+}
+
+.info-item span {
+    font-size: 0.95rem;
+    flex: 1;
+}
+        .header-buttons {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .header-image {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .profile-card {
+            background: var(--glass-bg);
+            backdrop-filter: blur(20px);
+            border: 1px solid var(--glass-border);
+            border-radius: var(--border-radius);
+            padding: 40px;
+            text-align: center;
+            box-shadow: var(--box-shadow);
+            transition: var(--transition);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .profile-card::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(45deg, transparent, rgba(255,255,255,0.1), transparent);
+            transform: rotate(45deg);
+            transition: all 0.6s;
+        }
+
+        .profile-card:hover::before {
+            transform: rotate(45deg) translate(50%, 50%);
+        }
+
+        .profile-card:hover {
+            transform: translateY(-10px) scale(1.02);
+            box-shadow: var(--box-shadow-hover);
+        }
+
+        .profile-image {
+            width: 140px;
+            height: 140px;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 25px;
+            font-size: 3.5rem;
+            color: white;
+            border: 3px solid rgba(255, 255, 255, 0.3);
+            transition: var(--transition);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .profile-card:hover .profile-image {
+            transform: scale(1.1) rotate(5deg);
+            border-color: rgba(255, 255, 255, 0.5);
+        }
+
+        .profile-info h3 {
+            margin-bottom: 20px;
+            color: white;
+            font-size: 1.5rem;
+        }
+
+        .info-grid {
+            display: grid;
+            gap: 15px;
+        }
+
+        .info-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 10px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 8px;
+            transition: var(--transition);
+        }
+
+        .info-item:hover {
+            background: rgba(255, 255, 255, 0.2);
+            transform: translateX(5px);
+        }
+
+        /* 滚动指示 */
+        .scroll-indicator {
+            position: absolute;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            text-align: center;
+            color: rgba(255, 255, 255, 0.8);
+        }
+
+        .scroll-text {
+            font-size: 0.9rem;
+            margin-bottom: 10px;
+            animation: fadeInOut 2s infinite;
+        }
+
+        .scroll-arrow {
+            width: 20px;
+            height: 20px;
+            border-right: 2px solid rgba(255, 255, 255, 0.8);
+            border-bottom: 2px solid rgba(255, 255, 255, 0.8);
+            transform: rotate(45deg);
+            margin: 0 auto;
+            animation: bounce 2s infinite;
+        }
+
+        @keyframes fadeInOut {
+            0%, 100% { opacity: 0.5; }
+            50% { opacity: 1; }
+        }
+
+        @keyframes bounce {
+            0%, 100% { transform: rotate(45deg) translateY(0); }
+            50% { transform: rotate(45deg) translateY(-10px); }
+        }
+
+        /* 关于我部分 */
+        .about-content {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 50px;
+        }
+
+        .about-card {
+            background: white;
+            padding: 40px;
+            border-radius: var(--border-radius);
+            box-shadow: var(--box-shadow);
+            margin-bottom: 30px;
+            transition: var(--transition);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .about-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 4px;
+            height: 100%;
+            background: linear-gradient(180deg, var(--primary-color), var(--accent-color));
+        }
+
+        .about-card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--box-shadow-hover);
+        }
+
+        .card-header {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 25px;
+        }
+
+        .card-header i {
+            color: var(--primary-color);
+            font-size: 1.5rem;
+        }
+
+        .card-header h3 {
+            color: var(--primary-color);
+            margin: 0;
+            font-size: 1.4rem;
+        }
+
+        .achievements-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
+        }
+
+        .achievement-item {
+            background: linear-gradient(135deg, #f8f4f0, #f0e6dc);
+            padding: 20px;
+            border-radius: var(--border-radius);
+            text-align: center;
+            transition: var(--transition);
+            border: 1px solid rgba(240, 230, 220, 0.8);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .achievement-item::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(197, 61, 19, 0.1), transparent);
+            transition: left 0.6s;
+        }
+
+        .achievement-item:hover::before {
+            left: 100%;
+        }
+
+        .achievement-item:hover {
+            transform: translateY(-8px) scale(1.02);
+            box-shadow: var(--box-shadow);
+            border-color: var(--accent-color);
+        }
+
+        .achievement-icon {
+            font-size: 2rem;
+            color: var(--accent-color);
+            margin-bottom: 15px;
+            display: block;
+            transition: var(--transition);
+        }
+
+        .achievement-item:hover .achievement-icon {
+            transform: scale(1.2) rotate(10deg);
+            color: var(--primary-color);
+        }
+
+        .tech-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        .tech-tag {
+            background: linear-gradient(135deg, #f8f4f0, #f0e6dc);
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            color: var(--text-color);
+            font-weight: 500;
+            transition: var(--transition);
+            border: 1px solid rgba(240, 230, 220, 0.8);
+        }
+
+        .tech-tag:hover {
+            transform: translateY(-2px);
+            background: linear-gradient(135deg, #f0e6dc, #f8f4f0);
+            border-color: var(--accent-color);
+        }
+
+        .contact-sidebar .contact-card {
+            background: white;
+            padding: 35px;
+            border-radius: var(--border-radius);
+            box-shadow: var(--box-shadow);
+            position: sticky;
+            top: 100px;
+            transition: var(--transition);
+        }
+
+        .contact-sidebar .contact-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--box-shadow-hover);
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 18px;
+            margin-bottom: 25px;
+            padding-bottom: 25px;
+            border-bottom: 1px solid #f1f5f9;
+            transition: var(--transition);
+        }
+
+        .contact-item:hover {
+            border-bottom-color: var(--accent-color);
+        }
+
+        .contact-item:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+        }
+
+        .contact-icon {
+            color: var(--primary-color);
+            font-size: 1.3rem;
+            margin-top: 2px;
+            min-width: 24px;
+            transition: var(--transition);
+        }
+
+        .contact-item:hover .contact-icon {
+            transform: scale(1.2);
+            color: var(--accent-color);
+        }
+
+        .contact-label {
+            display: block;
+            font-size: 0.9rem;
+            color: var(--text-light);
+            margin-bottom: 6px;
+            font-weight: 500;
+        }
+
+        .contact-value {
+            font-weight: 600;
+            color: var(--text-color);
+        }
+
+        .contact-value a {
+            color: var(--text-color);
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .contact-value a:hover {
+            color: var(--primary-color);
+        }
+
+        .github-accounts {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin-top: 8px;
+        }
+
+        .github-account {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            background: linear-gradient(135deg, #f8f4f0, #f0e6dc);
+            padding: 10px 16px;
+            border-radius: 12px;
+            font-size: 0.9rem;
+            transition: var(--transition);
+            border: 1px solid rgba(240, 230, 220, 0.8);
+        }
+
+        .github-account:hover {
+            transform: translateX(5px);
+            background: linear-gradient(135deg, #f0e6dc, #f8f4f0);
+            border-color: var(--accent-color);
+        }
+
+        .github-account a {
+            color: var(--text-color);
+            text-decoration: none;
+            transition: var(--transition);
+            font-weight: 500;
+        }
+
+        .github-account a:hover {
+            color: var(--primary-color);
+        }
+
+        /* 教育背景 */
+        .education-timeline {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .timeline-item {
+            background: white;
+            padding: 45px;
+            border-radius: var(--border-radius);
+            box-shadow: var(--box-shadow);
+            position: relative;
+            transition: var(--transition);
+            border-left: 4px solid var(--primary-color);
+        }
+
+        .timeline-item:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--box-shadow-hover);
+            border-left-color: var(--accent-color);
+        }
+
+        .timeline-date {
+            position: absolute;
+            top: 25px;
+            right: 25px;
+            background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+            color: white;
+            padding: 10px 20px;
+            border-radius: 25px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            box-shadow: 0 4px 15px rgba(197, 61, 19, 0.3);
+        }
+
+        .education-header h3 {
+            color: var(--primary-color);
+            margin-bottom: 15px;
+            font-size: 1.6rem;
+        }
+
+        .education-major {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: var(--secondary-color);
+            margin-bottom: 8px;
+        }
+
+        .education-status {
+            color: var(--text-light);
+            margin-bottom: 25px;
+            font-size: 1.1rem;
+        }
+
+        .courses-section h4 {
+            margin-bottom: 20px;
+            color: var(--primary-color);
+            font-size: 1.3rem;
+        }
+
+        .courses-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+            gap: 12px;
+        }
+
+        .course-item {
+            background: linear-gradient(135deg, #f8f4f0, #f0e6dc);
+            padding: 12px 18px;
+            border-radius: 25px;
+            text-align: center;
+            font-size: 0.9rem;
+            transition: var(--transition);
+            border: 1px solid rgba(240, 230, 220, 0.8);
+            font-weight: 500;
+        }
+
+        .course-item:hover {
+            transform: translateY(-3px) scale(1.05);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+            border-color: var(--accent-color);
+        }
+
+        .course-item.excellent {
+            background: linear-gradient(135deg, #f0f8e8, #d8e8c8);
+            color: #4a7c1f;
+            border: 1px solid #d8e8c8;
+        }
+
+        .course-item.good {
+            background: linear-gradient(135deg, #fef8e8, #f8e8c8);
+            color: #8c6d1f;
+            border: 1px solid #f8e8c8;
+        }
+
+        /* 专业技能 */
+        .skills-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+        }
+
+        .skills-category h3, .certificates-section h3 {
+            color: var(--primary-color);
+            margin-bottom: 35px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 1.5rem;
+        }
+
+        .category-header {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 35px;
+        }
+
+        .category-header i {
+            color: var(--primary-color);
+            font-size: 1.8rem;
+        }
+
+        .category-header h3 {
+            color: var(--primary-color);
+            margin: 0;
+            font-size: 1.5rem;
+        }
+
+        .skills-grid {
+            display: grid;
+            gap: 25px;
+        }
+
+        .skill-card {
+            background: white;
+            padding: 25px;
+            border-radius: var(--border-radius);
+            box-shadow: var(--box-shadow);
+            transition: var(--transition);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .skill-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.6s;
+        }
+
+        .skill-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .skill-card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--box-shadow-hover);
+        }
+
+        .skill-header {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+
+        .skill-header i {
+            font-size: 1.8rem;
+            color: var(--accent-color);
+            transition: var(--transition);
+        }
+
+        .skill-card:hover .skill-header i {
+            transform: scale(1.2) rotate(10deg);
+            color: var(--primary-color);
+        }
+
+        .skill-header span {
+            font-weight: 700;
+            font-size: 1.1rem;
+        }
+
+        .skill-level {
+            height: 10px;
+            background: #e2e8f0;
+            border-radius: 5px;
+            overflow: hidden;
+            margin-bottom: 12px;
+            position: relative;
+        }
+
+        .skill-progress {
+            height: 100%;
+            background: linear-gradient(90deg, var(--secondary-color), var(--accent-color));
+            border-radius: 5px;
+            transition: width 1.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .skill-progress::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
+            animation: shimmer 2s infinite;
+        }
+
+        @keyframes shimmer {
+            0% { left: -100%; }
+            100% { left: 100%; }
+        }
+
+        .skill-percent {
+            font-size: 1rem;
+            color: var(--text-light);
+            text-align: right;
+            display: block;
+            font-weight: 600;
+        }
+
+        .certificates-grid {
+            display: grid;
+            gap: 20px;
+        }
+
+        .certificate-item {
+            background: white;
+            padding: 20px 25px;
+            border-radius: var(--border-radius);
+            box-shadow: var(--box-shadow);
+            display: flex;
+            align-items: center;
+            gap: 18px;
+            transition: var(--transition);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .certificate-item::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            height: 100%;
+            width: 4px;
+            background: linear-gradient(180deg, var(--primary-color), var(--accent-color));
+            transform: scaleY(0);
+            transition: transform 0.4s;
+        }
+
+        .certificate-item:hover::before {
+            transform: scaleY(1);
+        }
+
+        .certificate-item:hover {
+            transform: translateX(10px);
+            box-shadow: var(--box-shadow-hover);
+        }
+
+        .certificate-item i {
+            color: var(--accent-color);
+            font-size: 1.4rem;
+            transition: var(--transition);
+        }
+
+        .certificate-item:hover i {
+            transform: scale(1.2);
+            color: var(--primary-color);
+        }
+
+        /* 竞赛实践 */
+        .competition-filters {
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+            margin-bottom: 50px;
+            flex-wrap: wrap;
+        }
+
+        .filter-btn {
+            padding: 12px 24px;
+            background: white;
+            border: 2px solid var(--primary-color);
+            border-radius: 25px;
+            color: var(--primary-color);
+            cursor: pointer;
+            transition: var(--transition);
+            font-weight: 600;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .filter-btn::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 0;
+            height: 0;
+            background: var(--primary-color);
+            border-radius: 50%;
+            transition: all 0.4s;
+            transform: translate(-50%, -50%);
+        }
+
+        .filter-btn.active, .filter-btn:hover {
+            color: white;
+        }
+
+        .filter-btn.active::before, .filter-btn:hover::before {
+            width: 300px;
+            height: 300px;
+        }
+
+        .filter-btn span {
+            position: relative;
+            z-index: 2;
+        }
+
+        .competition-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(420px, 1fr));
+            gap: 35px;
+        }
+
+        .competition-card {
+            background: white;
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--box-shadow);
+            transition: var(--transition);
+            position: relative;
+        }
+
+        .competition-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
+            transform: scaleX(0);
+            transition: transform 0.4s;
+        }
+
+        .competition-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .competition-card:hover {
+            transform: translateY(-12px) scale(1.02);
+            box-shadow: var(--box-shadow-hover);
+        }
+
+        .competition-header {
+            padding: 25px;
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .competition-header::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(45deg, transparent, rgba(255,255,255,0.1), transparent);
+            transform: rotate(45deg);
+        }
+
+        .competition-header h3 {
+            margin-bottom: 12px;
+            font-size: 1.3rem;
+            position: relative;
+            z-index: 2;
+        }
+
+        .competition-role {
+            font-size: 0.95rem;
+            opacity: 0.9;
+            position: relative;
+            z-index: 2;
+        }
+
+        .competition-body {
+            padding: 25px;
+        }
+
+        .competition-award {
+            color: var(--secondary-color);
+            font-weight: 700;
+            margin-bottom: 18px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 1.1rem;
+        }
+
+        .competition-description {
+            margin-bottom: 20px;
+        }
+
+        .competition-description ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .competition-description li {
+            margin-bottom: 10px;
+            padding-left: 24px;
+            position: relative;
+            line-height: 1.6;
+        }
+
+        .competition-description li:before {
+            content: "▶";
+            color: var(--accent-color);
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+            font-size: 0.8rem;
+        }
+
+        .competition-tech {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+
+        .tech-tag {
+            background: linear-gradient(135deg, #f8f4f0, #f0e6dc);
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            color: var(--text-color);
+            font-weight: 500;
+            transition: var(--transition);
+            border: 1px solid rgba(240, 230, 220, 0.8);
+        }
+
+        .tech-tag:hover {
+            transform: translateY(-2px);
+            background: linear-gradient(135deg, #f0e6dc, #f8f4f0);
+            border-color: var(--accent-color);
+        }
+
+        .competition-links {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+
+        .file-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: linear-gradient(135deg, var(--accent-color), var(--primary-color));
+            color: white;
+            padding: 10px 18px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: var(--transition);
+            font-weight: 500;
+        }
+
+        .file-link:hover {
+            transform: translateY(-3px) scale(1.05);
+            box-shadow: 0 8px 20px rgba(197, 61, 19, 0.3);
+        }
+
+        /* 论文专利 */
+        .publications-tabs {
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .tab-buttons {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 50px;
+            border-bottom: 2px solid #e2e8f0;
+            flex-wrap: wrap;
+            gap: 5px;
+        }
+
+        .tab-btn {
+            padding: 15px 35px;
+            background: none;
+            border: none;
+            cursor: pointer;
+            font-size: 1.05rem;
+            font-weight: 600;
+            color: var(--text-light);
+            position: relative;
+            transition: var(--transition);
+            border-radius: 8px 8px 0 0;
+        }
+
+        .tab-btn::before {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
+            transform: scaleX(0);
+            transition: transform 0.4s;
+        }
+
+        .tab-btn.active {
+            color: var(--primary-color);
+        }
+
+        .tab-btn.active::before {
+            transform: scaleX(1);
+        }
+
+        .tab-btn:hover {
+            color: var(--primary-color);
+            background: rgba(197, 61, 19, 0.05);
+        }
+
+        .tab-pane {
+            display: none;
+            animation: fadeIn 0.5s ease-in;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .tab-pane.active {
+            display: block;
+        }
+
+        .publication-list {
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+        }
+
+        .publication-item {
+            background: white;
+            padding: 30px;
+            border-radius: var(--border-radius);
+            box-shadow: var(--box-shadow);
+            transition: var(--transition);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .publication-item::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            height: 100%;
+            width: 4px;
+            background: linear-gradient(180deg, var(--primary-color), var(--accent-color));
+            transform: scaleY(0);
+            transition: transform 0.4s;
+        }
+
+        .publication-item:hover::before {
+            transform: scaleY(1);
+        }
+
+        .publication-item:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--box-shadow-hover);
+        }
+
+        .publication-item h3 {
+            margin-bottom: 15px;
+            color: var(--primary-color);
+            font-size: 1.3rem;
+            line-height: 1.4;
+        }
+
+        .publication-meta {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 15px;
+            font-size: 0.95rem;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .publication-type {
+            color: var(--secondary-color);
+            font-weight: 700;
+        }
+
+        .publication-date {
+            color: var(--text-light);
+            font-weight: 500;
+        }
+
+        .publication-authors {
+            color: var(--text-light);
+            margin-bottom: 15px;
+            font-style: italic;
+        }
+
+        .publication-abstract {
+            color: var(--text-color);
+            margin-bottom: 20px;
+            line-height: 1.7;
+        }
+
+        .publication-links {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+
+        /* 项目展示 */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
+            gap: 35px;
+        }
+
+        .project-card {
+            background: white;
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--box-shadow);
+            transition: var(--transition);
+            position: relative;
+        }
+
+        .project-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
+            transform: scaleX(0);
+            transition: transform 0.4s;
+        }
+
+        .project-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .project-card:hover {
+            transform: translateY(-12px) scale(1.02);
+            box-shadow: var(--box-shadow-hover);
+        }
+
+        .project-image {
+            height: 220px;
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 3.5rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .project-image::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(45deg, transparent, rgba(255,255,255,0.1), transparent);
+            transform: rotate(45deg);
+        }
+
+        .project-card:hover .project-image i {
+            transform: scale(1.2) rotate(10deg);
+        }
+
+        .project-content {
+            padding: 30px;
+        }
+
+        .project-content h3 {
+            margin-bottom: 15px;
+            color: var(--primary-color);
+            font-size: 1.4rem;
+        }
+
+        .project-description {
+            color: var(--text-color);
+            margin-bottom: 25px;
+            line-height: 1.7;
+        }
+
+        .project-links {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+
+        /* 荣誉奖项 */
+        .awards-filters {
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+            margin-bottom: 50px;
+            flex-wrap: wrap;
+        }
+
+        .awards-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 35px;
+        }
+
+        .award-card {
+            background: white;
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--box-shadow);
+            transition: var(--transition);
+            cursor: pointer;
+            position: relative;
+        }
+
+        .award-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
+            transform: scaleX(0);
+            transition: transform 0.4s;
+        }
+
+        .award-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .award-card:hover {
+            transform: translateY(-12px) scale(1.02);
+            box-shadow: var(--box-shadow-hover);
+        }
+
+        .award-image {
+            height: 220px;
+            background: linear-gradient(135deg, #f8f4f0, #f0e6dc);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--text-light);
+            font-size: 3.5rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .award-card:hover .award-image i {
+            transform: scale(1.2) rotate(10deg);
+            color: var(--accent-color);
+        }
+
+        .award-content {
+            padding: 25px;
+        }
+
+        .award-content h3 {
+            margin-bottom: 12px;
+            color: var(--primary-color);
+            font-size: 1.3rem;
+        }
+
+        .award-date {
+            color: var(--text-light);
+            font-size: 0.95rem;
+            margin-bottom: 18px;
+            font-weight: 500;
+        }
+
+        .award-description {
+            color: var(--text-color);
+            margin-bottom: 20px;
+            line-height: 1.6;
+        }
+
+        .award-links {
+            display: flex;
+            gap: 12px;
+        }
+
+        /* 校园活动 */
+        .activities-timeline {
+            max-width: 900px;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        .activities-timeline::before {
+            content: '';
+            position: absolute;
+            left: 40px;
+            top: 0;
+            bottom: 0;
+            width: 3px;
+            background: linear-gradient(180deg, var(--primary-color), var(--accent-color));
+            border-radius: 2px;
+        }
+
+        .activity-item {
+            background: white;
+            padding: 30px;
+            border-radius: var(--border-radius);
+            box-shadow: var(--box-shadow);
+            margin-bottom: 35px;
+            position: relative;
+            margin-left: 100px;
+            transition: var(--transition);
+        }
+
+        .activity-item:hover {
+            transform: translateX(10px);
+            box-shadow: var(--box-shadow-hover);
+        }
+
+        .activity-item::before {
+            content: '';
+            position: absolute;
+            left: -60px;
+            top: 35px;
+            width: 24px;
+            height: 24px;
+            background: var(--primary-color);
+            border-radius: 50%;
+            border: 4px solid white;
+            box-shadow: 0 0 0 3px var(--accent-color);
+            transition: var(--transition);
+        }
+
+        .activity-item:hover::before {
+            transform: scale(1.2);
+            background: var(--accent-color);
+        }
+
+        .activity-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 18px;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .activity-title h3 {
+            color: var(--primary-color);
+            margin-bottom: 8px;
+            font-size: 1.4rem;
+        }
+
+        .activity-date {
+            background: linear-gradient(135deg, var(--accent-color), var(--primary-color));
+            color: white;
+            padding: 8px 18px;
+            border-radius: 25px;
+            font-size: 0.9rem;
+            white-space: nowrap;
+            font-weight: 600;
+            box-shadow: 0 4px 15px rgba(197, 61, 19, 0.3);
+        }
+
+        .activity-position {
+            color: var(--secondary-color);
+            font-weight: 600;
+            margin-bottom: 15px;
+            font-size: 1.1rem;
+        }
+
+        .activity-description {
+            color: var(--text-color);
+            line-height: 1.7;
+        }
+
+        /* 联系方式 */
+        .contact-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+        }
+
+        .contact-form {
+            background: white;
+            padding: 35px;
+            border-radius: var(--border-radius);
+            box-shadow: var(--box-shadow);
+            transition: var(--transition);
+        }
+
+        .contact-form:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--box-shadow-hover);
+        }
+
+        .contact-form h3 {
+            margin-bottom: 25px;
+            color: var(--primary-color);
+            font-size: 1.5rem;
+        }
+
+        .form-group {
+            margin-bottom: 25px;
+            position: relative;
+        }
+
+        .form-group input, .form-group textarea {
+            width: 100%;
+            padding: 16px 20px;
+            border: 2px solid #e2e8f0;
+            border-radius: 12px;
+            font-family: inherit;
+            font-size: 1rem;
+            transition: var(--transition);
+            background: #f8fafc;
+        }
+
+        .form-group input:focus, .form-group textarea:focus {
+            outline: none;
+            border-color: var(--primary-color);
+            background: white;
+            box-shadow: 0 0 0 4px rgba(197, 61, 19, 0.1);
+            transform: translateY(-2px);
+        }
+
+        /* 页脚 */
+        .footer {
+            background: linear-gradient(135deg, var(--dark-color), #1a1008);
+            color: white;
+            text-align: center;
+            padding: 50px 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .footer::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
+        }
+
+        .footer-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 30px;
+        }
+
+        .footer-brand {
+            display: flex;
+            align-items: center;
+            font-size: 1.8rem;
+            font-weight: 800;
+            color: white;
+        }
+
+        .footer-quote {
+            font-family: 'Ma Shan Zheng', cursive;
+            font-size: 1.2rem;
+            opacity: 0.8;
+            font-style: italic;
+        }
+
+        .footer-info p {
+            margin: 5px 0;
+            opacity: 0.7;
+        }
+
+        /* 文件预览模态框 */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.9);
+            z-index: 2000;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            backdrop-filter: blur(10px);
+        }
+
+        .modal-content {
+            background: white;
+            max-width: 95%;
+            max-height: 95%;
+            width: 100%;
+            height: 100%;
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            position: relative;
+            animation: modalFadeIn 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            display: flex;
+            flex-direction: column;
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.3);
+        }
+
+        @keyframes modalFadeIn {
+            from { opacity: 0; transform: translateY(-60px) scale(0.9); }
+            to { opacity: 1; transform: translateY(0) scale(1); }
+        }
+
+        .close-btn {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            font-size: 1.8rem;
+            cursor: pointer;
+            z-index: 10;
+            color: white;
+            background: rgba(0, 0, 0, 0.5);
+            border: none;
+            width: 50px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            transition: var(--transition);
+            backdrop-filter: blur(10px);
+        }
+
+        .close-btn:hover {
+            background: rgba(0, 0, 0, 0.7);
+            transform: scale(1.1);
+        }
+
+        .modal-header {
+            padding: 25px;
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .modal-body {
+            flex: 1;
+            display: flex;
+            overflow: hidden;
+        }
+
+        .modal-preview {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 30px;
+            overflow: auto;
+        }
+
+        .modal-preview img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+            border-radius: 8px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        .modal-preview iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+            border-radius: 8px;
+        }
+
+        .file-not-supported {
+            text-align: center;
+            color: var(--text-light);
+            padding: 40px;
+        }
+
+        .file-not-supported i {
+            font-size: 4rem;
+            margin-bottom: 20px;
+            color: var(--accent-color);
+        }
+
+        /* 返回顶部按钮 */
+        .back-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            border: none;
+            border-radius: 50%;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            box-shadow: var(--box-shadow);
+            transition: var(--transition);
+            opacity: 0;
+            visibility: hidden;
+            z-index: 1000;
+        }
+
+        .back-to-top.visible {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .back-to-top:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(197, 61, 19, 0.4);
+        }
+
+        /* 响应式设计 */
+        @media (max-width: 1200px) {
+            .container {
+                max-width: 1140px;
+            }
+
+            .header-text h1 {
+                font-size: 3rem;
+            }
+
+            .section-title {
+                font-size: 2.5rem;
+            }
+        }
+
+        @media (max-width: 992px) {
+            .header-content {
+                grid-template-columns: 1fr;
+                gap: 60px;
+                text-align: center;
+            }
+
+            .about-content {
+                grid-template-columns: 1fr;
+            }
+
+            .skills-container {
+                grid-template-columns: 1fr;
+                gap: 50px;
+            }
+
+            .contact-content {
+                grid-template-columns: 1fr;
+            }
+
+            .competition-grid {
+                grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            }
+
+            .projects-grid {
+                grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            }
+
+            .header-text h1 {
+                font-size: 2.8rem;
+            }
+
+            .section-title {
+                font-size: 2.2rem;
+            }
+        }
+
+        @media screen and (max-width: 900px) {
+    .nav-menu {
+        position: fixed;
+        top: 60px;
+        left: -100%;
+        width: 100%;
+        background: rgba(255, 255, 255, 0.98);
+        backdrop-filter: blur(20px);
+        flex-direction: column;
+        text-align: center;
+        transition: var(--transition);
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        padding: 20px 0;
+        gap: 0;
+        z-index: 1000;
+    }
+
+    .nav-menu.active {
+        left: 0;
+    }
+
+    .nav-item {
+        margin: 8px 0;
+        width: 100%;
+    }
+
+    .nav-link {
+        padding: 15px 30px;
+        font-size: 1.1rem;
+        justify-content: center;
+        border-radius: 0;
+    }
+
+    .dropdown-content {
+        position: static;
+        opacity: 1;
+        visibility: visible;
+        transform: none;
+        box-shadow: none;
+        background: transparent;
+        backdrop-filter: none;
+        padding: 0;
+        min-width: auto;
+        border: none;
+        display: none;
+    }
+
+    .dropdown.active .dropdown-content {
+        display: block;
+    }
+
+    .dropdown-content .nav-link {
+        padding: 12px 30px 12px 50px;
+        font-size: 1rem;
+    }
+
+
+            .hamburger {
+                display: flex;
+            }
+
+            .hamburger.active span:nth-child(1) {
+                transform: rotate(-45deg) translate(-6px, 6px);
+            }
+
+            .hamburger.active span:nth-child(2) {
+                opacity: 0;
+            }
+
+            .hamburger.active span:nth-child(3) {
+                transform: rotate(45deg) translate(-6px, -6px);
+            }
+
+            .header-text h1 {
+                font-size: 2.5rem;
+            }
+
+            .subtitle {
+                font-size: 1.5rem;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+
+            .tab-buttons {
+                flex-direction: column;
+                align-items: center;
+                gap: 10px;
+            }
+
+            .tab-btn {
+                width: 100%;
+                text-align: center;
+            }
+
+            .activities-timeline::before {
+                left: 25px;
+            }
+
+            .activity-item {
+                margin-left: 70px;
+            }
+
+            .activity-item::before {
+                left: -45px;
+            }
+
+    .header-content {
+        grid-template-columns: 1fr;
+        gap: 60px;
+        text-align: center;
+    }
+
+    .header-stats {
+        justify-content: center;
+        gap: 25px;
+    }
+
+    .stat {
+        min-width: 100px;
+    }
+
+    .stat .number {
+        font-size: 2rem;
+    }
+
+
+
+    .header-stats {
+        flex-wrap: wrap;
+        justify-content: space-around;
+        gap: 20px;
+    }
+
+    .stat {
+        min-width: 90px;
+    }
+
+    .stat .number {
+        font-size: 1.8rem;
+    }
+
+    .header-buttons {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+
+    .btn {
+        width: 100%;
+        max-width: 280px;
+        justify-content: center;
+    }
+
+    .profile-card {
+        padding: 25px;
+    }
+
+    .info-item {
+        padding: 10px;
+    }
+
+    .info-item span {
+        font-size: 0.9rem;
+    }
+}
+
+
+    .header-stats {
+        gap: 15px;
+    }
+
+    .stat {
+        min-width: 80px;
+    }
+
+    .stat .number {
+        font-size: 1.6rem;
+    }
+
+    .stat .label {
+        font-size: 0.85rem;
+    }
+
+        @media (max-width: 576px) {
+            .container {
+                padding: 0 20px;
+            }
+
+            .section {
+                padding: 80px 0;
+            }
+
+            .header {
+                padding: 140px 0 80px;
+            }
+
+            .header-text h1 {
+                font-size: 2.2rem;
+            }
+
+            .subtitle {
+                font-size: 1.3rem;
+            }
+
+            .section-title {
+                font-size: 1.8rem;
+            }
+
+            .competition-grid, .projects-grid, .awards-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .courses-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .achievements-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .about-card, .contact-sidebar .contact-card, .timeline-item, .skill-card, .certificate-item, .publication-item, .contact-form {
+                padding: 25px;
+            }
+
+            .profile-card {
+                padding: 30px;
+            }
+
+            .activities-timeline::before {
+                left: 20px;
+            }
+
+            .activity-item {
+                margin-left: 60px;
+                padding: 25px;
+            }
+
+            .activity-item::before {
+                left: -40px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- 中国风背景元素 -->
+    <div class="chinese-bg-elements">
+        <div class="bg-mountain"></div>
+        <div class="bg-clouds"></div>
+        <div class="bg-lotus"></div>
+        <div class="bg-bamboo"></div>
+        <div class="bg-ink-wash"></div>
+    </div>
+
+    <!-- 导航栏 -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <span class="chinese-seal">杨</span>
+                <span class="brand-text">尚毅</span>
+            </div>
+<ul class="nav-menu">
+    <li class="nav-item">
+        <a href="#about" class="nav-link">
+            <i class="fas fa-user"></i>
+            <span>关于我</span>
+        </a>
+    </li>
+    <li class="nav-item">
+        <a href="#education" class="nav-link">
+            <i class="fas fa-graduation-cap"></i>
+            <span>教育背景</span>
+        </a>
+    </li>
+    <li class="nav-item">
+        <a href="#skills" class="nav-link">
+            <i class="fas fa-cogs"></i>
+            <span>专业技能</span>
+        </a>
+    </li>
+    <li class="nav-item">
+        <a href="#competitions" class="nav-link">
+            <i class="fas fa-trophy"></i>
+            <span>竞赛实践</span>
+        </a>
+    </li>
+    <li class="nav-item dropdown">
+        <a href="#" class="nav-link">
+            <i class="fas fa-ellipsis-h"></i>
+            <span>更多</span>
+            <i class="fas fa-chevron-down" style="font-size: 0.7rem;"></i>
+        </a>
+        <div class="dropdown-content">
+            <a href="#publications" class="nav-link">
+                <i class="fas fa-file-alt"></i>
+                <span>论文专利</span>
+            </a>
+            <a href="#projects" class="nav-link">
+                <i class="fas fa-laptop-code"></i>
+                <span>项目展示</span>
+            </a>
+            <a href="#awards" class="nav-link">
+                <i class="fas fa-award"></i>
+                <span>荣誉奖项</span>
+            </a>
+            <a href="#activities" class="nav-link">
+                <i class="fas fa-users"></i>
+                <span>校园活动</span>
+            </a>
+        </div>
+    </li>
+    <li class="nav-item">
+        <a href="#contact" class="nav-link">
+            <i class="fas fa-envelope"></i>
+            <span>联系方式</span>
+        </a>
+    </li>
+</ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+<header class="header">
+    <div class="container">
+        <div class="header-content">
+            <div class="header-text">
+                <h1>杨尚毅</h1>
+                <p class="subtitle">药学研究者 | 竞赛达人 | 创新开发者</p>
+                <p class="description">沈阳药科大学药学院药物分析专业本科生，专注于生物医药与数据科学的交叉研究，在多项国际国内竞赛中斩获佳绩，拥有多项专利和学术论文。</p>
+
+                <div class="header-stats">
+                    <div class="stat">
+                        <span class="number">40+</span>
+                        <span class="label">竞赛奖项</span>
+                    </div>
+                    <div class="stat">
+                        <span class="number">4项授权<br>若干项受理</span>
+                        <span class="label">专利成果</span>
+                    </div>
+                    <div class="stat">
+                        <span class="number">7项</span>
+                        <span class="label">论文著作</span>
+                    </div>
+                </div>
+
+                <div class="header-buttons">
+                    <a href="#contact" class="btn btn-primary">
+                        <i class="fas fa-paper-plane"></i>
+                        联系我
+                    </a>
+                    <a href="#projects" class="btn btn-secondary">
+                        <i class="fas fa-eye"></i>
+                        查看项目
+                    </a>
+                </div>
+            </div>
+
+            <div class="header-image">
+                <div class="profile-card">
+                    <div class="profile-image">
+                        <i class="fas fa-user-graduate"></i>
+                    </div>
+                    <div class="profile-info">
+                        <h3>基本信息</h3>
+                        <div class="info-grid">
+                            <div class="info-item">
+                                <i class="fas fa-school"></i>
+                                <span>沈阳药科大学</span>
+                            </div>
+                            <div class="info-item">
+                                <i class="fas fa-graduation-cap"></i>
+                                <span>药物分析专业</span>
+                            </div>
+                            <div class="info-item">
+                                <i class="fas fa-calendar"></i>
+                                <span>预计2026年毕业</span>
+                            </div>
+                            <div class="info-item">
+                                <i class="fas fa-phone"></i>
+                                <span>(+86) 193-0708-1070</span>
+                            </div>
+                            <div class="info-item">
+                                <i class="fas fa-envelope"></i>
+                                <span>y209076941@gmail.com</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 滚动指示 -->
+    <div class="scroll-indicator">
+        <div class="scroll-text">向下探索</div>
+        <div class="scroll-arrow"></div>
+    </div>
+</header>
+    <!-- 关于我 -->
+    <section id="about" class="section">
+        <div class="container">
+            <h2 class="section-title">关于我</h2>
+            <p class="section-subtitle">博学之，审问之，慎思之，明辨之，笃行之</p>
+
+            <div class="about-content">
+                <div class="about-main">
+                    <div class="about-card">
+                        <div class="card-header">
+                            <i class="fas fa-user"></i>
+                            <h3>个人简介</h3>
+                        </div>
+                        <div class="card-body">
+                            <p>我是一名沈阳药科大学药学院药物分析专业的本科生，对生物医药与数据科学的交叉领域充满热情，致力于将计算方法应用于药物研发和生物医学研究。</p>
+                            <p>在校期间，我不仅专注于专业课程学习，还积极参与科研项目和各类竞赛，在数学建模、生物技术和创新创业等领域取得了优异成绩。</p>
+                        </div>
+                    </div>
+
+                    <div class="about-card">
+                        <div class="card-header">
+                            <i class="fas fa-trophy"></i>
+                            <h3>主要成就</h3>
+                        </div>
+                        <div class="card-body">
+                            <div class="achievements-grid">
+                                <div class="achievement-item">
+                                    <div class="achievement-icon">
+                                        <i class="fas fa-medal"></i>
+                                    </div>
+                                    <span>美赛M奖获得者</span>
+                                </div>
+                                <div class="achievement-item">
+                                    <div class="achievement-icon">
+                                        <i class="fas fa-microscope"></i>
+                                    </div>
+                                    <span>多项实用新型专利</span>
+                                </div>
+                                <div class="achievement-item">
+                                    <div class="achievement-icon">
+                                        <i class="fas fa-file-alt"></i>
+                                    </div>
+                                    <span>EI/SCI论文作者</span>
+                                </div>
+                                <div class="achievement-item">
+                                    <div class="achievement-icon">
+                                        <i class="fas fa-code"></i>
+                                    </div>
+                                    <span>前端入门开发者</span>
+                                </div>
+                                <div class="achievement-item">
+                                    <div class="achievement-icon">
+                                        <i class="fas fa-flask"></i>
+                                    </div>
+                                    <span>iGEM银牌得主</span>
+                                </div>
+                                <div class="achievement-item">
+                                    <div class="achievement-icon">
+                                        <i class="fas fa-rocket"></i>
+                                    </div>
+                                    <span>创新创业竞赛达人</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="about-card">
+                        <div class="card-header">
+                            <i class="fas fa-laptop-code"></i>
+                            <h3>技术开发</h3>
+                        </div>
+                        <div class="card-body">
+                            <p>具备扎实的Web开发能力，熟练使用Streamlit、Python等工具开发数据可视化和业务分析平台。独立开发了多个Web应用，涵盖数据可视化、商业分析、问卷调查和虚拟实验等领域。</p>
+                            <div class="tech-tags">
+                                <span class="tech-tag">Streamlit</span>
+                                <span class="tech-tag">Python</span>
+                                <span class="tech-tag">数据可视化</span>
+                                <span class="tech-tag">前端开发</span>
+                                <span class="tech-tag">Web应用</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contact-sidebar">
+                    <div class="contact-card">
+                        <div class="card-header">
+                            <i class="fas fa-address-card"></i>
+                            <h3>联系信息</h3>
+                        </div>
+                        <div class="card-body">
+                            <div class="contact-info">
+                                <div class="contact-item">
+                                    <div class="contact-icon">
+                                        <i class="fas fa-phone"></i>
+                                    </div>
+                                    <div class="contact-details">
+                                        <span class="contact-label">电话</span>
+                                        <span class="contact-value">(+86) 193-0708-1070</span>
+                                    </div>
+                                </div>
+                                <div class="contact-item">
+                                    <div class="contact-icon">
+                                        <i class="fas fa-envelope"></i>
+                                    </div>
+                                    <div class="contact-details">
+                                        <span class="contact-label">邮箱</span>
+                                        <span class="contact-value">y209076941@gmail.com</span>
+                                    </div>
+                                </div>
+                                <div class="contact-item">
+                                    <div class="contact-icon">
+                                        <i class="fab fa-github"></i>
+                                    </div>
+                                    <div class="contact-details">
+                                        <span class="contact-label">GitHub</span>
+                                        <div class="github-accounts">
+                                            <div class="github-account">
+                                                <i class="fab fa-github"></i>
+                                                <a href="https://github.com/YSY-1026" target="_blank">YSY-1026</a>
+                                            </div>
+                                            <div class="github-account">
+                                                <i class="fab fa-github"></i>
+                                                <a href="https://github.com/y209076941-a11y" target="_blank">y209076941-a11y</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="contact-item">
+                                    <div class="contact-icon">
+                                        <i class="fas fa-map-marker-alt"></i>
+                                    </div>
+                                    <div class="contact-details">
+                                        <span class="contact-label">地址</span>
+                                        <span class="contact-value">沈阳药科大学药学院</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 教育背景 -->
+    <section id="education" class="section bg-light">
+        <div class="container">
+            <h2 class="section-title">教育背景</h2>
+            <p class="section-subtitle">学而不思则罔，思而不学则殆</p>
+
+            <div class="education-timeline">
+                <div class="timeline-item">
+                    <div class="timeline-date">2022 - 2026</div>
+                    <div class="timeline-content">
+                        <div class="education-header">
+                            <h3>沈阳药科大学 - 药学院</h3>
+                            <p class="education-major">药物分析专业 A+</p>
+                            <p class="education-status">预计2026年6月毕业</p>
+                        </div>
+
+                        <div class="courses-section">
+                            <h4>主要课程成绩</h4>
+                            <div class="courses-grid">
+                                <div class="course-item excellent">
+                                    <span class="course-name">药学细胞生物学</span>
+                                    <span class="course-grade">优</span>
+                                </div>
+                                <div class="course-item excellent">
+                                    <span class="course-name">药物生物技术</span>
+                                    <span class="course-grade">优</span>
+                                </div>
+                                <div class="course-item excellent">
+                                    <span class="course-name">基础生命科学</span>
+                                    <span class="course-grade">优</span>
+                                </div>
+                                <div class="course-item good">
+                                    <span class="course-name">生命伦理学</span>
+                                    <span class="course-grade">98</span>
+                                </div>
+                                <div class="course-item good">
+                                    <span class="course-name">微生物学</span>
+                                    <span class="course-grade">86</span>
+                                </div>
+                                <div class="course-item good">
+                                    <span class="course-name">免疫学</span>
+                                    <span class="course-grade">86</span>
+                                </div>
+                                <div class="course-item">
+                                    <span class="course-name">生物化学与分子生物学</span>
+                                </div>
+                                <div class="course-item">
+                                    <span class="course-name">药物分析学</span>
+                                </div>
+                                <div class="course-item">
+                                    <span class="course-name">药剂学</span>
+                                </div>
+                                <div class="course-item">
+                                    <span class="course-name">天然药物化学</span>
+                                </div>
+                                <div class="course-item">
+                                    <span class="course-name">生物药剂学和药物动力学</span>
+                                </div>
+                                <div class="course-item">
+                                    <span class="course-name">生物药物分析学</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 专业技能 -->
+    <section id="skills" class="section">
+        <div class="container">
+            <h2 class="section-title">专业技能</h2>
+            <p class="section-subtitle">工欲善其事，必先利其器</p>
+
+            <div class="skills-container">
+                <div class="skills-category">
+                    <div class="category-header">
+                        <i class="fas fa-code"></i>
+                        <h3>技术技能</h3>
+                    </div>
+                    <div class="skills-grid">
+                        <div class="skill-card">
+                            <div class="skill-header">
+                                <i class="fab fa-python"></i>
+                                <span>Python/R 数据分析</span>
+                            </div>
+                            <div class="skill-level">
+                                <div class="skill-progress" style="width: 90%"></div>
+                            </div>
+                            <span class="skill-percent">90%</span>
+                        </div>
+                        <div class="skill-card">
+                            <div class="skill-header">
+                                <i class="fas fa-calculator"></i>
+                                <span>数学建模</span>
+                            </div>
+                            <div class="skill-level">
+                                <div class="skill-progress" style="width: 88%"></div>
+                            </div>
+                            <span class="skill-percent">88%</span>
+                        </div>
+                        <div class="skill-card">
+                            <div class="skill-header">
+                                <i class="fas fa-dna"></i>
+                                <span>生物信息学</span>
+                            </div>
+                            <div class="skill-level">
+                                <div class="skill-progress" style="width: 85%"></div>
+                            </div>
+                            <span class="skill-percent">85%</span>
+                        </div>
+                        <div class="skill-card">
+                            <div class="skill-header">
+                                <i class="fas fa-laptop-code"></i>
+                                <span>Web开发</span>
+                            </div>
+                            <div class="skill-level">
+                                <div class="skill-progress" style="width: 80%"></div>
+                            </div>
+                            <span class="skill-percent">80%</span>
+                        </div>
+                        <div class="skill-card">
+                            <div class="skill-header">
+                                <i class="fab fa-python"></i>
+                                <span>Streamlit开发</span>
+                            </div>
+                            <div class="skill-level">
+                                <div class="skill-progress" style="width: 85%"></div>
+                            </div>
+                            <span class="skill-percent">85%</span>
+                        </div>
+                        <div class="skill-card">
+                            <div class="skill-header">
+                                <i class="fas fa-chart-bar"></i>
+                                <span>数据可视化</span>
+                            </div>
+                            <div class="skill-level">
+                                <div class="skill-progress" style="width: 90%"></div>
+                            </div>
+                            <span class="skill-percent">90%</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="certificates-section">
+                    <div class="category-header">
+                        <i class="fas fa-certificate"></i>
+                        <h3>证书与会员资格</h3>
+                    </div>
+                    <div class="certificates-grid">
+                        <div class="certificate-item">
+                            <i class="fas fa-award"></i>
+                            <span>中国商业统计学会 CRA 证书</span>
+                        </div>
+                        <div class="certificate-item">
+                            <i class="fas fa-user-tie"></i>
+                            <span>内蒙古创新教育学会学生荣誉会员</span>
+                        </div>
+                        <div class="certificate-item">
+                            <i class="fas fa-flask"></i>
+                            <span>中国化学会学生会员</span>
+                        </div>
+                        <div class="certificate-item">
+                            <i class="fas fa-robot"></i>
+                            <span>Robotex世界机器人大会志愿者</span>
+                        </div>
+                        <div class="certificate-item">
+                            <i class="fas fa-campground"></i>
+                            <span>浙江大学衢州两院夏令营优秀营员</span>
+                        </div>
+                        <div class="certificate-item">
+                            <i class="fas fa-language"></i>
+                            <span>英语四级、六级证书</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 竞赛实践 -->
+    <section id="competitions" class="section bg-light">
+        <div class="container">
+            <h2 class="section-title">竞赛实践</h2>
+            <p class="section-subtitle">百舸争流，奋楫者先</p>
+
+            <div class="competition-filters">
+                <button class="filter-btn active" data-filter="all">全部</button>
+                <button class="filter-btn" data-filter="math">数学建模</button>
+                <button class="filter-btn" data-filter="innovation">创新创业</button>
+                <button class="filter-btn" data-filter="science">科研竞赛</button>
+                <button class="filter-btn" data-filter="other">其他竞赛</button>
+            </div>
+
+            <div class="competition-grid">
+                <!-- 竞赛卡片将通过JavaScript动态生成 -->
+            </div>
+        </div>
+    </section>
+
+    <!-- 论文专利 -->
+    <section id="publications" class="section">
+        <div class="container">
+            <h2 class="section-title">论文与专利</h2>
+            <p class="section-subtitle">学以致用，知行合一</p>
+
+            <div class="publications-tabs">
+                <div class="tab-buttons">
+                    <button class="tab-btn active" data-tab="papers">学术论文</button>
+                    <button class="tab-btn" data-tab="patents">专利成果</button>
+                    <button class="tab-btn" data-tab="copyrights">软件著作权</button>
+                    <button class="tab-btn" data-tab="works">作品著作权</button>
+                </div>
+
+                <div class="tab-content">
+                    <div class="tab-pane active" id="papers">
+                        <div class="publication-list">
+                            <!-- 论文列表将通过JavaScript动态生成 -->
+                        </div>
+                    </div>
+
+                    <div class="tab-pane" id="patents">
+                        <div class="publication-list">
+                            <!-- 专利列表将通过JavaScript动态生成 -->
+                        </div>
+                    </div>
+
+                    <div class="tab-pane" id="copyrights">
+                        <div class="publication-list">
+                            <!-- 软件著作权列表将通过JavaScript动态生成 -->
+                        </div>
+                    </div>
+
+                    <div class="tab-pane" id="works">
+                        <div class="publication-list">
+                            <!-- 作品著作权列表将通过JavaScript动态生成 -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 项目展示 -->
+    <section id="projects" class="section bg-light">
+        <div class="container">
+            <h2 class="section-title">项目展示</h2>
+            <p class="section-subtitle">知行合一，实践出真知</p>
+
+            <div class="projects-grid">
+                <!-- 项目卡片将通过JavaScript动态生成 -->
+            </div>
+        </div>
+    </section>
+
+    <!-- 荣誉奖项 -->
+    <section id="awards" class="section">
+        <div class="container">
+            <h2 class="section-title">荣誉奖项</h2>
+            <p class="section-subtitle">天道酬勤，业道酬精</p>
+
+            <div class="awards-filters">
+                <button class="filter-btn active" data-filter="all">全部</button>
+                <button class="filter-btn" data-filter="national">国家级</button>
+                <button class="filter-btn" data-filter="provincial">省级</button>
+                <button class="filter-btn" data-filter="university">校级</button>
+            </div>
+
+            <div class="awards-grid">
+                <!-- 奖项卡片将通过JavaScript动态生成 -->
+            </div>
+        </div>
+    </section>
+
+    <!-- 校园活动 -->
+    <section id="activities" class="section bg-light">
+        <div class="container">
+            <h2 class="section-title">校园与社会活动</h2>
+            <p class="section-subtitle">知行合一，全面发展</p>
+
+            <div class="activities-timeline">
+                <!-- 活动时间线将通过JavaScript动态生成 -->
+            </div>
+        </div>
+    </section>
+
+    <!-- 联系方式 -->
+    <section id="contact" class="section">
+        <div class="container">
+            <h2 class="section-title">联系方式</h2>
+            <p class="section-subtitle">海内存知己，天涯若比邻</p>
+
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-card">
+                        <div class="card-header">
+                            <i class="fas fa-address-card"></i>
+                            <h3>联系信息</h3>
+                        </div>
+                        <div class="card-body">
+                            <div class="contact-details">
+                                <div class="contact-item">
+                                    <div class="contact-icon">
+                                        <i class="fas fa-phone"></i>
+                                    </div>
+                                    <div class="contact-details">
+                                        <span class="contact-label">电话</span>
+                                        <span class="contact-value">(+86) 193-0708-1070</span>
+                                    </div>
+                                </div>
+                                <div class="contact-item">
+                                    <div class="contact-icon">
+                                        <i class="fas fa-envelope"></i>
+                                    </div>
+                                    <div class="contact-details">
+                                        <span class="contact-label">邮箱</span>
+                                        <span class="contact-value">y209076941@gmail.com</span>
+                                    </div>
+                                </div>
+                                <div class="contact-item">
+                                    <div class="contact-icon">
+                                        <i class="fab fa-github"></i>
+                                    </div>
+                                    <div class="contact-details">
+                                        <span class="contact-label">GitHub</span>
+                                        <div class="github-accounts">
+                                            <div class="github-account">
+                                                <i class="fab fa-github"></i>
+                                                <a href="https://github.com/YSY-1026" target="_blank">YSY-1026</a>
+                                            </div>
+                                            <div class="github-account">
+                                                <i class="fab fa-github"></i>
+                                                <a href="https://github.com/y209076941-a11y" target="_blank">y209076941-a11y</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="contact-item">
+                                    <div class="contact-icon">
+                                        <i class="fas fa-map-marker-alt"></i>
+                                    </div>
+                                    <div class="contact-details">
+                                        <span class="contact-label">地址</span>
+                                        <span class="contact-value">沈阳药科大学药学院</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contact-form">
+                    <div class="card-header">
+                        <i class="fas fa-paper-plane"></i>
+                        <h3>发送消息</h3>
+                    </div>
+                    <form id="contact-form">
+                        <div class="form-group">
+                            <input type="text" placeholder="您的姓名" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" placeholder="您的邮箱" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea placeholder="您的消息" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">
+                            <i class="fas fa-paper-plane"></i>
+                            发送消息
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 页脚 -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-main">
+                    <div class="footer-brand">
+                        <span class="chinese-seal">杨</span>
+                        <span class="brand-text">尚毅</span>
+                    </div>
+                    <p class="footer-quote">路漫漫其修远兮，吾将上下而求索</p>
+                </div>
+                <div class="footer-info">
+                    <p>&copy; 2024 杨尚毅 - 个人成就展示</p>
+                    <p>药学研究者 | 竞赛达人 | 创新开发者</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- 文件预览模态框 -->
+    <div class="modal" id="file-preview-modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 id="modal-title">文件预览</h3>
+                <button class="close-btn">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="modal-preview" id="modal-preview">
+                    <!-- 文件预览内容将在这里显示 -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 返回顶部按钮 -->
+    <button class="back-to-top">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <script>
+        // 主要功能
+        document.addEventListener('DOMContentLoaded', function() {
+           // 导航菜单切换
+const hamburger = document.querySelector('.hamburger');
+const navMenu = document.querySelector('.nav-menu');
+const dropdowns = document.querySelectorAll('.dropdown');
+
+if (hamburger) {
+    hamburger.addEventListener('click', function() {
+        hamburger.classList.toggle('active');
+        navMenu.classList.toggle('active');
+    });
+}
+
+// 关闭移动端菜单当点击链接时
+document.querySelectorAll('.nav-menu a').forEach(link => {
+    link.addEventListener('click', () => {
+        hamburger.classList.remove('active');
+        navMenu.classList.remove('active');
+
+        // 关闭所有下拉菜单
+        dropdowns.forEach(dropdown => {
+            dropdown.classList.remove('active');
+        });
+    });
+});
+
+// 移动端下拉菜单切换
+dropdowns.forEach(dropdown => {
+    const dropdownLink = dropdown.querySelector('.nav-link');
+
+    dropdownLink.addEventListener('click', function(e) {
+        if (window.innerWidth <= 900) {
+            e.preventDefault();
+            dropdown.classList.toggle('active');
+        }
+    });
+});
+
+// 更新活动导航项
+function updateActiveNavItem() {
+    const sections = document.querySelectorAll('section');
+    const navLinks = document.querySelectorAll('.nav-link');
+
+    let current = '';
+
+    sections.forEach(section => {
+        const sectionTop = section.offsetTop;
+        const sectionHeight = section.clientHeight;
+
+        if (window.scrollY >= sectionTop - 100) {
+            current = section.getAttribute('id');
+        }
+    });
+
+    navLinks.forEach(link => {
+        link.classList.remove('active');
+        if (link.getAttribute('href') === `#${current}`) {
+            link.classList.add('active');
+        }
+    });
+}
+
+// 初始化活动导航项
+updateActiveNavItem();
+
+// 滚动时更新活动导航项
+window.addEventListener('scroll', updateActiveNavItem);
+
+            // 滚动时导航栏效果
+            window.addEventListener('scroll', function() {
+                const navbar = document.querySelector('.navbar');
+                const backToTop = document.querySelector('.back-to-top');
+
+                if (window.scrollY > 100) {
+                    navbar.classList.add('scrolled');
+                    backToTop.classList.add('visible');
+                } else {
+                    navbar.classList.remove('scrolled');
+                    backToTop.classList.remove('visible');
+                }
+            });
+
+            // 返回顶部按钮
+            const backToTop = document.querySelector('.back-to-top');
+            backToTop.addEventListener('click', function() {
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+            });
+
+            // 技能条动画
+            const skillBars = document.querySelectorAll('.skill-progress');
+
+            function animateSkillBars() {
+                skillBars.forEach(bar => {
+                    const width = bar.style.width;
+                    bar.style.width = '0';
+                    setTimeout(() => {
+                        bar.style.width = width;
+                    }, 100);
+                });
+            }
+
+            // 当技能部分进入视口时触发动画
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        animateSkillBars();
+                        observer.unobserve(entry.target);
+                    }
+                });
+            });
+
+            const skillsSection = document.querySelector('#skills');
+            if (skillsSection) {
+                observer.observe(skillsSection);
+            }
+
+            // 论文专利标签切换
+            const tabButtons = document.querySelectorAll('.tab-btn');
+            const tabPanes = document.querySelectorAll('.tab-pane');
+
+            tabButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    // 移除所有按钮和面板的active类
+                    tabButtons.forEach(btn => btn.classList.remove('active'));
+                    tabPanes.forEach(pane => pane.classList.remove('active'));
+
+                    // 给当前点击的按钮和对应的面板添加active类
+                    this.classList.add('active');
+                    const tabId = this.getAttribute('data-tab');
+                    document.getElementById(tabId).classList.add('active');
+                });
+            });
+
+            // 竞赛和奖项筛选
+            const filterButtons = document.querySelectorAll('.filter-btn');
+
+            filterButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const filter = this.getAttribute('data-filter');
+
+                    // 更新按钮状态
+                    filterButtons.forEach(btn => btn.classList.remove('active'));
+                    this.classList.add('active');
+
+                    // 筛选内容
+                    if (filter === 'all') {
+                        document.querySelectorAll('.competition-card, .award-card').forEach(item => {
+                            item.style.display = 'block';
+                        });
+                    } else {
+                        document.querySelectorAll('.competition-card, .award-card').forEach(item => {
+                            if (item.classList.contains(filter)) {
+                                item.style.display = 'block';
+                            } else {
+                                item.style.display = 'none';
+                            }
+                        });
+                    }
+                });
+            });
+
+            // 联系表单处理
+            const contactForm = document.getElementById('contact-form');
+            if (contactForm) {
+                contactForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    alert('感谢您的消息！我会尽快回复您。');
+                    contactForm.reset();
+                });
+            }
+
+            // 动态生成内容
+            generateCompetitions();
+            generatePublications();
+            generateProjects();
+            generateAwards();
+            generateActivities();
+
+            // 初始化模态框功能
+            initModal();
+
+            // 添加滚动动画
+            addScrollAnimations();
+        });
+
+        // 文件路径映射
+        const filePathMapping = {
+            // 数学建模竞赛
+            "美赛M-2400293.pdf": "assets/images/美赛M-2400293.pdf",
+            "数模国赛一等奖.jpg": "assets/images/数模国赛一等奖.jpg",
+            "数模国赛2.jpg": "assets/images/数模国赛2.jpg",
+            "2411012（mathor+国三）.pdf": "assets/images/2411012（mathor+国三）.pdf",
+            "mathor 省一.pdf": "assets/images/mathor 省一.pdf",
+            "mathor 指导老师.pdf": "assets/images/mathor 指导老师.pdf",
+            "第1次东北三省大学生数学建模联赛.jpg": "assets/images/第1次东北三省大学生数学建模联赛.jpg",
+            "第2次东三省一等奖.pdf": "assets/images/第2次东三省一等奖.pdf",
+            "数维杯  杨尚毅.png": "assets/images/数维杯  杨尚毅.png",
+            "五一杯 三等奖.jpg": "assets/images/五一杯 三等奖.jpg",
+            "杨尚毅  亚太杯.pdf": "assets/images/杨尚毅  亚太杯.pdf",
+            "生产力指导.jpg": "assets/images/生产力指导.jpg",
+            "辽赛一等奖.jpg": "assets/images/辽赛一等奖.jpg",
+
+            // 创新创业竞赛
+            "igem-certificates-2024-5270-member.pdf": "assets/images/igem-certificates-2024-5270-member.pdf",
+            "互联网+hpv.jpg": "assets/images/互联网+hpv.jpg",
+            "互联网+药咖奖状.pdf": "assets/images/互联网+药咖奖状.pdf",
+            "互联网+药咖奖状.png": "assets/images/互联网+药咖奖状.png",
+            "triz辽赛.jpg": "assets/images/triz辽赛.jpg",
+            "24年triz 省三.pdf": "assets/images/24年triz 省三.pdf",
+            "创新方法大赛获奖证书(1).pdf": "assets/images/创新方法大赛获奖证书(1).pdf",
+            "未来杯国铜.jpg": "assets/images/未来杯国铜.jpg",
+            "未来杯省二.jpg": "assets/images/未来杯省二.jpg",
+            "中医药创新创业大赛 省决.jpg": "assets/images/中医药创新创业大赛 省决.jpg",
+            "辽宁省大学生“体育+”创新创业大赛.jpg": "assets/images/辽宁省大学生“体育+”创新创业大赛.jpg",
+            "辽宁省体育文化与运动健康促进大学生创新创业大赛.jpg": "assets/images/辽宁省体育文化与运动健康促进大学生创新创业大赛.jpg",
+            "正大杯  三等奖奖状_1.jpg": "assets/images/正大杯  三等奖奖状_1.jpg",
+            "青松杯  药咖.jpg": "assets/images/青松杯  药咖.jpg",
+            "青松杯 院三等奖.pdf": "assets/images/青松杯 院三等奖.pdf",
+            "triz 药咖 校赛.jpg": "assets/images/triz 药咖 校赛.jpg",
+            "中医药大赛校级_1.jpg": "assets/images/中医药大赛校级_1.jpg",
+
+            // 其他竞赛
+            "2023大挑  省二.jpg": "assets/images/2023大挑  省二.jpg",
+            "2022年大挑.jpg": "assets/images/2022年大挑.jpg",
+            "计算机博弈.jpg": "assets/images/计算机博弈.jpg",
+            "外研杯.jpg": "assets/images/外研杯.jpg",
+            "学创杯省三.png": "assets/images/学创杯省三.png",
+            "寒假实践 .jpg": "assets/images/寒假实践 .jpg",
+            "青年志愿服务大赛 校赛.pdf": "assets/images/青年志愿服务大赛 校赛.pdf",
+            "志愿者服务大赛  药品回收.jpg": "assets/images/志愿者服务大赛  药品回收.jpg",
+            "模联  最佳代表团.jpg": "assets/images/模联  最佳代表团.jpg",
+            "模拟联合国 最佳代表团.pdf": "assets/images/模拟联合国 最佳代表团.pdf",
+
+            // 论文专利
+            "第一篇ei检索.pdf": "assets/images/第一篇ei检索.pdf",
+            "第1篇EI-录用通知(1)(1)(1).pdf": "assets/images/第1篇EI-录用通知(1)(1)(1).pdf",
+            "第1篇EI-基于光学效率计算模型的塔式太阳能电站定日镜场调度研究-文章(1).docx": "assets/images/第1篇EI-基于光学效率计算模型的塔式太阳能电站定日镜场调度研究-文章(1).docx",
+            "第一篇EI国际会议邀请.jpg": "assets/images/第一篇EI国际会议邀请.jpg",
+            "第一篇EI会议邀请2.png": "assets/images/第一篇EI会议邀请2.png",
+            "第2篇EI-ICECST24703-录用通知(1).pdf": "assets/images/第2篇EI-ICECST24703-录用通知(1).pdf",
+            "第2篇EI-英语 基于神经网络和遗传算法在花卉基地布局进度优化模型中的应用(3)(1).docx": "assets/images/第2篇EI-英语 基于神经网络和遗传算法在花卉基地布局进度优化模型中的应用(3)(1).docx",
+            "Guangwei Fan,Jinjin Hao, Hengrui Zhang,Jiemei Zhong,Shangyi Yang,Bei Zhang-ACCEPTANCE LETTER.pdf": "assets/images/Guangwei Fan,Jinjin Hao, Hengrui Zhang,Jiemei Zhong,Shangyi Yang,Bei Zhang-ACCEPTANCE LETTER.pdf",
+            "Revised Draft-Guangwei Fan.docx": "assets/images/Revised Draft-Guangwei Fan.docx",
+            "Xiaoxiao Zheng et al.-Acta Pharmaceutica Acceptance Letter.pdf": "assets/images/Xiaoxiao Zheng et al.-Acta Pharmaceutica Acceptance Letter.pdf",
+            "Yang et al. – Certificate of Acceptance – Frontiers in Oncology.pdf": "assets/images/Yang et al. – Certificate of Acceptance – Frontiers in Oncology.pdf",
+
+            // 专利
+            "专利授权-一种热敷药包辅助热敷器-实用新型专利证书-20241022.pdf": "assets/images/专利授权-一种热敷药包辅助热敷器-实用新型专利证书-20241022.pdf",
+            "2024-0823-SY067-实用新型专利证书.pdf": "assets/images/2024-0823-SY067-实用新型专利证书.pdf",
+            "一种用于纳米促渗的纳米晶片-宗改3.26提交版本.doc": "assets/images/一种用于纳米促渗的纳米晶片-宗改3.26提交版本.doc",
+            "2024-1604-SY125-实用新型专利证书.pdf": "assets/images/2024-1604-SY125-实用新型专利证书.pdf",
+            "2024-0919-SY074-实用新型专利证书-一种雾化装置.pdf": "assets/images/2024-0919-SY074-实用新型专利证书-一种雾化装置.pdf",
+            "咖啡粉碎机专利.pdf": "assets/images/咖啡粉碎机专利.pdf",
+            "一种CAR-T细胞扩增配制装置及CAR-T产品制备系统-专利申请受理通知书.pdf": "assets/images/一种CAR-T细胞扩增配制装置及CAR-T产品制备系统-专利申请受理通知书.pdf",
+            "一种中药药渣回收处理装置-专利申请受理通知书.pdf": "assets/images/一种中药药渣回收处理装置-专利申请受理通知书.pdf",
+
+            // 软件著作权和作品著作权
+            "中药精萃生产加工运维系统.png": "assets/images/中药精萃生产加工运维系统.png",
+            "社区养老一键通服务系统.png": "assets/images/社区养老一键通服务系统.png",
+            "作品著作权1.png": "assets/images/作品著作权1.png",
+            "作品著作权2.png": "assets/images/作品著作权2.png",
+
+            // 荣誉证书
+            "CRA证书.pdf": "assets/images/CRA证书.pdf",
+            "药院科研之星.jpg": "assets/images/药院科研之星.jpg",
+            "衢州两院优秀营员.jpg": "assets/images/衢州两院优秀营员.jpg",
+            "CET4_202306_210142231100619_1.pptx": "assets/images/CET4_202306_210142231100619_1.pptx",
+            "培训证书  杨尚毅.png": "assets/images/培训证书  杨尚毅.png",
+            "杨尚毅-样本.pdf": "assets/images/杨尚毅-样本.pdf",
+            "杨尚毅-样本2.pdf": "assets/images/杨尚毅-样本2.pdf"
+        };
+
+        // 在文件链接生成时使用映射
+        function getFilePath(filename) {
+            return filePathMapping[filename] || `assets/images/${filename}`;
+        }
+
+        // 竞赛数据 - 包含所有重复的比赛信息
+        const competitionsData = [
+            // 数学建模类竞赛
+            {
+                title: "美国大学生数学建模竞赛 (MCM/ICM) 2024",
+                role: "队长 / 建模 / 编程",
+                award: "Meritorious Winner (国际一等奖)",
+                description: [
+                    "领导团队解决复杂数学建模问题，应用先进算法",
+                    "完成高质量英文论文撰写和结果可视化",
+                    "在国际竞赛中展现出色的数学建模能力"
+                ],
+                tech: ["数学建模", "算法设计", "英文写作", "数据可视化"],
+                category: "math",
+                files: [
+                    {name: "查看证书", file: "美赛M-2400293.pdf", type: "pdf"}
+                ]
+            },
+            {
+                title: "全国大学生数学建模竞赛 2023",
+                role: "队长 / 建模 / 编程",
+                award: "辽宁赛区一等奖",
+                description: [
+                    "领导团队完成复杂数学建模问题",
+                    "应用多种算法解决实际问题",
+                    "完成高质量论文撰写和结果可视化"
+                ],
+                tech: ["数学建模", "算法设计", "数据可视化"],
+                category: "math",
+                files: [
+                    {name: "查看证书", file: "数模国赛一等奖.jpg", type: "image"}
+                ]
+            },
+            {
+                title: "全国大学生数学建模竞赛 2024",
+                role: "队长 / 建模 / 编程",
+                award: "辽宁赛区一等奖",
+                description: [
+                    "再次获得省级一等奖，展现持续的数学建模能力",
+                    "解决新的复杂问题，应用创新算法",
+                    "完成高质量论文和可视化展示"
+                ],
+                tech: ["数学建模", "算法优化", "创新方法"],
+                category: "math",
+                files: [
+                    {name: "查看证书", file: "数模国赛2.jpg", type: "image"}
+                ]
+            },
+            {
+                title: "MathorCup数学应用挑战赛 2024",
+                role: "队长 / 建模 / 编程",
+                award: "全国三等奖",
+                description: [
+                    "解决复杂工业优化问题",
+                    "应用运筹学和优化算法",
+                    "完成技术创新和方案实现"
+                ],
+                tech: ["运筹学", "优化算法", "数学建模"],
+                category: "math",
+                files: [
+                    {name: "查看证书", file: "2411012（mathor+国三）.pdf", type: "pdf"}
+                ]
+            },
+            {
+                title: "MathorCup数学应用挑战赛 2024",
+                role: "指导老师",
+                award: "分赛区一等奖",
+                description: [
+                    "作为指导老师指导学生参赛",
+                    "提供建模指导和算法支持",
+                    "帮助学生获得优异成绩"
+                ],
+                tech: ["教学指导", "算法设计", "项目管理"],
+                category: "math",
+                files: [
+                    {name: "查看证书", file: "mathor 省一.pdf", type: "pdf"},
+                    {name: "指导老师证书", file: "mathor 指导老师.pdf", type: "pdf"}
+                ]
+            },
+            {
+                title: "东北三省数学建模联赛 2023",
+                role: "参赛队员",
+                award: "一等奖",
+                description: [
+                    "参与区域数学建模竞赛",
+                    "应用数学方法解决实际问题",
+                    "获得优异成绩"
+                ],
+                tech: ["数学建模", "区域竞赛", "团队合作"],
+                category: "math",
+                files: [
+                    {name: "查看证书", file: "第1次东北三省大学生数学建模联赛.jpg", type: "image"}
+                ]
+            },
+            {
+                title: "东北三省数学建模联赛 2024",
+                role: "参赛队员",
+                award: "一等奖",
+                description: [
+                    "再次参与区域数学建模竞赛",
+                    "持续展现数学建模能力",
+                    "获得优异成绩"
+                ],
+                tech: ["数学建模", "持续学习", "算法应用"],
+                category: "math",
+                files: [
+                    {name: "查看证书", file: "第2次东三省一等奖.pdf", type: "pdf"}
+                ]
+            },
+            {
+                title: "数维杯国际数学建模竞赛 2023",
+                role: "队长 / 建模 / 编程",
+                award: "国际一等奖",
+                description: [
+                    "解决国际性数学建模问题",
+                    "应用先进算法和模型",
+                    "完成英文论文撰写"
+                ],
+                tech: ["国际竞赛", "英文写作", "高级算法"],
+                category: "math",
+                files: [
+                    {name: "查看证书", file: "数维杯  杨尚毅.png", type: "image"}
+                ]
+            },
+            {
+                title: "五一杯数学建模竞赛 2024",
+                role: "参赛队员",
+                award: "三等奖",
+                description: [
+                    "参与五一数学建模竞赛",
+                    "应用数学方法解决实际问题",
+                    "获得竞赛经验"
+                ],
+                tech: ["数学建模", "五一竞赛", "团队协作"],
+                category: "math",
+                files: [
+                    {name: "查看证书", file: "五一杯 三等奖.jpg", type: "image"}
+                ]
+            },
+            {
+                title: "亚太杯数学建模竞赛",
+                role: "参赛队员",
+                award: "参与证书",
+                description: [
+                    "参与亚太地区数学建模竞赛",
+                    "扩展国际竞赛经验",
+                    "提升数学建模能力"
+                ],
+                tech: ["亚太竞赛", "国际视野", "数学应用"],
+                category: "math",
+                files: [
+                    {name: "查看证书", file: "杨尚毅  亚太杯.pdf", type: "pdf"}
+                ]
+            },
+            {
+                title: "全国大学生新质生产力大赛 2024",
+                role: "指导老师",
+                award: "三等奖",
+                description: [
+                    "作为指导老师指导学生参加新质生产力大赛",
+                    "在数学建模赛项中获得奖项",
+                    "展现教学指导能力"
+                ],
+                tech: ["教学指导", "新质生产力", "数学应用"],
+                category: "innovation",
+                files: [
+                    {name: "查看证书", file: "生产力指导.jpg", type: "image"}
+                ]
+            },
+            {
+                title: "辽宁省大学生数学建模竞赛 2023",
+                role: "团队成员",
+                award: "一等奖",
+                description: [
+                    "省级数学建模竞赛",
+                    "团队协作解决问题",
+                    "获得省级一等奖"
+                ],
+                tech: ["数学建模", "省级竞赛", "团队协作"],
+                category: "math",
+                files: [
+                    {name: "查看证书", file: "辽赛一等奖.jpg", type: "image"}
+                ]
+            },
+
+            // 创新创业类竞赛
+            {
+                title: "国际基因工程机器大赛 (iGEM) 2024",
+                role: "Wiki+干实验",
+                award: "银牌 (Silver Medal)",
+                description: [
+                    "负责实验数据查阅和基因通路搭建",
+                    "运用R和Python进行蛋白质和基因数据可视化",
+                    "搭建团队Wiki展示工作进程"
+                ],
+                tech: ["Python", "R", "生物信息学", "数据可视化"],
+                category: "science",
+                files: [
+                    {name: "查看证书", file: "igem-certificates-2024-5270-member.pdf", type: "pdf"}
+                ]
+            },
+            {
+                title: "中国\"互联网+\"大学生创新创业大赛 2024",
+                role: "队长 / 商业数据分析",
+                award: "省银奖 (HPV项目)",
+                description: [
+                    "抗HPV战略计划项目负责人",
+                    "女性健康精准化服务开创者",
+                    "商业数据分析和项目管理"
+                ],
+                tech: ["商业分析", "项目管理", "健康服务"],
+                category: "innovation",
+                files: [
+                    {name: "查看证书", file: "互联网+hpv.jpg", type: "image"}
+                ]
+            },
+            {
+                title: "中国\"互联网+\"大学生创新创业大赛 2024",
+                role: "队长 / 项目负责人",
+                award: "省银奖 (药咖项目)",
+                description: [
+                    "本草药咖创新创业项目",
+                    "大健康产业实践者",
+                    "商业模型设计和市场分析"
+                ],
+                tech: ["创新创业", "商业模型", "市场分析"],
+                category: "innovation",
+                files: [
+                    {name: "查看证书", file: "互联网+药咖奖状.pdf", type: "pdf"},
+                    {name: "证书图片", file: "互联网+药咖奖状.png", type: "image"}
+                ]
+            },
+            {
+                title: "辽宁省\"TRIZ杯\"大学生创新方法大赛 2023",
+                role: "项目负责人",
+                award: "二等奖",
+                description: [
+                    "携梦索香本草药咖项目",
+                    "应用TRIZ理论进行创新",
+                    "大健康的实践者"
+                ],
+                tech: ["TRIZ理论", "创新方法", "项目管理"],
+                category: "innovation",
+                files: [
+                    {name: "查看证书", file: "triz辽赛.jpg", type: "image"}
+                ]
+            },
+            {
+                title: "辽宁省\"TRIZ杯\"大学生创新方法大赛 2024",
+                role: "团队成员",
+                award: "三等奖",
+                description: [
+                    "草本馥郁本草药咖创新之旅",
+                    "基于TRIZ理论的创新项目",
+                    "团队协作完成项目"
+                ],
+                tech: ["TRIZ理论", "团队协作", "创新实践"],
+                category: "innovation",
+                files: [
+                    {name: "查看证书", file: "24年triz 省三.pdf", type: "pdf"}
+                ]
+            },
+            {
+                title: "中国TRIZ杯大学生创新方法大赛 2025",
+                role: "团队成员",
+                award: "全国三等奖",
+                description: [
+                    "甘韵苦香，本草咖缘项目",
+                    "基于TRIZ的药咖商业模式创新",
+                    "国家级创新方法竞赛"
+                ],
+                tech: ["TRIZ理论", "商业模式", "国家级竞赛"],
+                category: "innovation",
+                files: [
+                    {name: "查看证书", file: "创新方法大赛获奖证书(1).pdf", type: "pdf"}
+                ]
+            },
+            {
+                title: "未来杯大学生互联网创意创业大赛 2023",
+                role: "团队负责人",
+                award: "全国总决赛铜奖",
+                description: [
+                    "待梦归中药咖啡创业项目",
+                    "全国性创新创业竞赛",
+                    "创业组别获奖"
+                ],
+                tech: ["创新创业", "全国竞赛", "创业项目"],
+                category: "innovation",
+                files: [
+                    {name: "查看证书", file: "未来杯国铜.jpg", type: "image"}
+                ]
+            },
+            {
+                title: "未来杯大学生互联网创意创业大赛 2023",
+                role: "团队负责人",
+                award: "省级二等奖",
+                description: [
+                    "待梦归中药咖啡创业项目",
+                    "省级赛区获奖",
+                    "创业项目展示"
+                ],
+                tech: ["创新创业", "省级竞赛", "项目展示"],
+                category: "innovation",
+                files: [
+                    {name: "查看证书", file: "未来杯省二.jpg", type: "image"}
+                ]
+            },
+            {
+                title: "辽宁省大学生中医药大健康产业创新创业大赛 2023",
+                role: "项目负责人",
+                award: "一等奖",
+                description: [
+                    "携梦索香本草药咖项目",
+                    "中医药大健康产业创新",
+                    "省级一等奖"
+                ],
+                tech: ["中医药", "大健康", "创新创业"],
+                category: "innovation",
+                files: [
+                    {name: "查看证书", file: "中医药创新创业大赛 省决.jpg", type: "image"}
+                ]
+            },
+            {
+                title: "辽宁省大学生\"体育+\"创新创业大赛 2023",
+                role: "负责人",
+                award: "二等奖",
+                description: [
+                    "携梦萦香本草药咖项目",
+                    "体育与健康产业结合",
+                    "创新商业模式"
+                ],
+                tech: ["体育+", "健康产业", "商业模式"],
+                category: "innovation",
+                files: [
+                    {name: "查看证书", file: "辽宁省大学生“体育+”创新创业大赛.jpg", type: "image"}
+                ]
+            },
+            {
+                title: "辽宁省体育文化与运动健康促进大学生创新创业大赛 2023",
+                role: "负责人",
+                award: "三等奖",
+                description: [
+                    "携梦萦香本草药咖项目",
+                    "体育文化与健康促进",
+                    "创新创业实践"
+                ],
+                tech: ["体育文化", "健康促进", "创新实践"],
+                category: "innovation",
+                files: [
+                    {name: "查看证书", file: "辽宁省体育文化与运动健康促进大学生创新创业大赛.jpg", type: "image"}
+                ]
+            },
+            {
+                title: "正大杯市场调查与分析大赛 2024",
+                role: "团队成员",
+                award: "三等奖",
+                description: [
+                    "携梦禁毒，本草药咖市场调查",
+                    "市场存量及其潜力调查分析",
+                    "数据分析与市场研究"
+                ],
+                tech: ["市场调查", "数据分析", "市场研究"],
+                category: "innovation",
+                files: [
+                    {name: "查看证书", file: "正大杯  三等奖奖状_1.jpg", type: "image"}
+                ]
+            },
+            {
+                title: "青松医药杯大学生创业设计大赛 2023",
+                role: "项目负责人",
+                award: "优秀奖",
+                description: [
+                    "待到梦归去，还来就药咖项目",
+                    "中药咖啡创业设计",
+                    "校级创业竞赛"
+                ],
+                tech: ["创业设计", "中药咖啡", "校级竞赛"],
+                category: "innovation",
+                files: [
+                    {name: "查看证书", file: "青松杯  药咖.jpg", type: "image"},
+                    {name: "院级证书", file: "青松杯 院三等奖.pdf", type: "pdf"}
+                ]
+            },
+            {
+                title: "沈阳药科大学第一届创新方法大赛 2023",
+                role: "团队成员",
+                award: "二等奖",
+                description: [
+                    "待到梦归去，还来就药咖项目",
+                    "中药咖啡创业项目书",
+                    "校级创新竞赛"
+                ],
+                tech: ["创新方法", "校级竞赛", "项目策划"],
+                category: "innovation",
+                files: [
+                    {name: "查看证书", file: "triz 药咖 校赛.jpg", type: "image"}
+                ]
+            },
+            {
+                title: "沈阳药科大学中医药大赛 2023",
+                role: "参赛队员",
+                award: "校级奖项",
+                description: [
+                    "参与校级中医药竞赛",
+                    "展示中医药知识技能",
+                    "获得竞赛经验"
+                ],
+                tech: ["中医药", "校级竞赛", "知识应用"],
+                category: "innovation",
+                files: [
+                    {name: "查看证书", file: "中医药大赛校级_1.jpg", type: "image"}
+                ]
+            },
+            {
+                title: "学创杯全国大学生创业综合模拟大赛 2023",
+                role: "参赛队员",
+                award: "省三等奖",
+                description: [
+                    "创业综合模拟竞赛",
+                    "商业决策和运营管理",
+                    "省级创业模拟"
+                ],
+                tech: ["创业模拟", "商业决策", "运营管理"],
+                category: "innovation",
+                files: [
+                    {name: "查看证书", file: "学创杯省三.png", type: "image"}
+                ]
+            },
+
+            // 其他类竞赛
+            {
+                title: "挑战杯辽宁省大学生课外学术科技作品竞赛 2023",
+                role: "团队成员",
+                award: "二等奖",
+                description: [
+                    "树基立本，药言妙道项目",
+                    "基于基因检测技术的儿童精准用药模式研究",
+                    "学术科技作品竞赛"
+                ],
+                tech: ["基因检测", "精准用药", "学术科技"],
+                category: "science",
+                files: [
+                    {name: "查看证书", file: "2023大挑  省二.jpg", type: "image"}
+                ]
+            },
+            {
+                title: "挑战杯沈阳药科大学校内赛 2023",
+                role: "团队成员",
+                award: "优秀奖",
+                description: [
+                    "关于大学生兼职现状和存在问题的研究报告",
+                    "社会调查与研究分析",
+                    "校内选拔赛"
+                ],
+                tech: ["社会调查", "研究报告", "校内竞赛"],
+                category: "other",
+                files: [
+                    {name: "查看证书", file: "2022年大挑.jpg", type: "image"}
+                ]
+            },
+            {
+                title: "辽宁省本科大学生计算机博弈大赛 2023",
+                role: "参赛队员",
+                award: "三等奖",
+                description: [
+                    "中国象棋项目比赛",
+                    "计算机博弈算法设计",
+                    "省级计算机竞赛"
+                ],
+                tech: ["计算机博弈", "算法设计", "象棋AI"],
+                category: "other",
+                files: [
+                    {name: "查看证书", file: "计算机博弈.jpg", type: "image"}
+                ]
+            },
+            {
+                title: "外研社全国英语阅读大赛 2022",
+                role: "参赛队员",
+                award: "校级初赛奖项",
+                description: [
+                    "参与全国英语阅读大赛",
+                    "提升英语阅读能力",
+                    "校级选拔赛"
+                ],
+                tech: ["英语阅读", "语言能力", "校级竞赛"],
+                category: "other",
+                files: [
+                    {name: "查看证书", file: "外研杯.jpg", type: "image"}
+                ]
+            },
+            {
+                title: "寒假社会实践活动 2023",
+                role: "团队成员",
+                award: "二等奖",
+                description: [
+                    "感恩母校·同聚沈药实践活动",
+                    "社会实践和母校宣传",
+                    "获得实践奖项"
+                ],
+                tech: ["社会实践", "母校宣传", "团队活动"],
+                category: "other",
+                files: [
+                    {name: "查看证书", file: "寒假实践 .jpg", type: "image"}
+                ]
+            },
+            {
+                title: "青年志愿服务大赛 2023",
+                role: "参与者",
+                award: "校级奖项",
+                description: [
+                    "药品回收志愿服务项目",
+                    "参与志愿服务竞赛",
+                    "社会服务和公益实践"
+                ],
+                tech: ["志愿服务", "药品回收", "公益实践"],
+                category: "other",
+                files: [
+                    {name: "查看证书", file: "青年志愿服务大赛 校赛.pdf", type: "pdf"},
+                    {name: "服务证书", file: "志愿者服务大赛  药品回收.jpg", type: "image"}
+                ]
+            },
+            {
+                title: "模拟联合国大会 2022",
+                role: "代表团成员",
+                award: "最佳代表团奖",
+                description: [
+                    "共商国际时事，一展青年风采",
+                    "模拟联合国外交活动",
+                    "团队合作和外交模拟"
+                ],
+                tech: ["模拟联合国", "国际事务", "团队合作"],
+                category: "other",
+                files: [
+                    {name: "查看证书", file: "模联  最佳代表团.jpg", type: "image"},
+                    {name: "PDF证书", file: "模拟联合国 最佳代表团.pdf", type: "pdf"}
+                ]
+            }
+        ];
+
+        // 动态生成竞赛卡片
+        function generateCompetitions() {
+            const competitionGrid = document.querySelector('.competition-grid');
+
+            if (!competitionGrid) return;
+
+            competitionsData.forEach(competition => {
+                const card = document.createElement('div');
+                card.className = `competition-card ${competition.category}`;
+
+                let filesHTML = '';
+                if (competition.files && competition.files.length > 0) {
+                    filesHTML = competition.files.map(file =>
+                        `<a href="#" class="file-link" data-file="${getFilePath(file.file)}" data-type="${file.type}">
+                            <i class="fas ${getFileIcon(file.type)}"></i>${file.name}
+                        </a>`
+                    ).join('');
+                }
+
+                card.innerHTML = `
+                    <div class="competition-header">
+                        <h3>${competition.title}</h3>
+                        <p class="competition-role">${competition.role}</p>
+                    </div>
+                    <div class="competition-body">
+                        <div class="competition-award">
+                            <i class="fas fa-trophy"></i>${competition.award}
+                        </div>
+                        <div class="competition-description">
+                            <ul>
+                                ${competition.description.map(item => `<li>${item}</li>`).join('')}
+                            </ul>
+                        </div>
+                        <div class="competition-tech">
+                            ${competition.tech.map(tech => `<span class="tech-tag">${tech}</span>`).join('')}
+                        </div>
+                        <div class="competition-links">
+                            ${filesHTML}
+                        </div>
+                    </div>
+                `;
+
+                competitionGrid.appendChild(card);
+            });
+        }
+
+        // 论文专利数据 - 包含所有重复的论文和专利信息
+        const publicationsData = {
+            papers: [
+                // EI会议论文
+                {
+                    title: "Research on the Scheduling of Heliostat Fields in Tower Solar Power Plants Based on Optical Efficiency Calculation Model",
+                    type: "EI Compendex 收录",
+                    date: "2025",
+                    authors: "杨尚毅(通讯作者), 苏宏博, 万博, 卢恒, 王子轩, 杨晓凌, 宋昱洁",
+                    status: "已发表",
+                    abstract: "本文全面研究了塔式太阳能电站定日镜场的调度优化策略，通过构建光学效率计算模型，分析了定日镜技术的关键特性和光学效率的影响因素。",
+                    files: [
+                        {name: "EI检索证明", file: "第一篇ei检索.pdf", type: "pdf"},
+                        {name: "录用通知", file: "第1篇EI-录用通知(1)(1)(1).pdf", type: "pdf"},
+                        {name: "论文全文", file: "第1篇EI-基于光学效率计算模型的塔式太阳能电站定日镜场调度研究-文章(1).docx", type: "doc"},
+                        {name: "国际会议邀请1", file: "第一篇EI国际会议邀请.jpg", type: "image"},
+                        {name: "国际会议邀请2", file: "第一篇EI会议邀请2.png", type: "image"}
+                    ]
+                },
+                {
+                    title: "Application of Neural Networks and Genetic Algorithms in Optimization Model for Flower Base Layout",
+                    type: "EI Compendex 收录",
+                    date: "2024",
+                    authors: "杨尚毅, 万博, 袁虹, 李海波, 张伟毅, 严伟毅",
+                    status: "已录用",
+                    abstract: "应用神经网络和遗传算法在花卉基地布局优化模型中的研究。",
+                    files: [
+                        {name: "录用通知", file: "第2篇EI-ICECST24703-录用通知(1).pdf", type: "pdf"},
+                        {name: "论文全文", file: "第2篇EI-英语 基于神经网络和遗传算法在花卉基地布局进度优化模型中的应用(3)(1).docx", type: "doc"}
+                    ]
+                },
+
+                // SCI期刊论文
+                {
+                    title: "Impact mechanism of Chinese consumers' ecological environment consciousness on the green value co-creation",
+                    type: "SCI 期刊",
+                    date: "2025",
+                    authors: "范广伟, 郝金金, 张恒瑞, 钟介眉, 杨尚毅, 张蓓",
+                    status: "已录用",
+                    abstract: "研究中国消费者生态环境意识对绿色价值共创的影响机制。",
+                    files: [
+                        {name: "录用通知", file: "Guangwei Fan,Jinjin Hao, Hengrui Zhang,Jiemei Zhong,Shangyi Yang,Bei Zhang-ACCEPTANCE LETTER.pdf", type: "pdf"},
+                        {name: "修订稿", file: "Revised Draft-Guangwei Fan.docx", type: "doc"}
+                    ]
+                },
+                {
+                    title: "Acta Pharmaceutica 期刊论文",
+                    type: "SCI 期刊",
+                    date: "待定",
+                    authors: "郑潇潇等（含杨尚毅）",
+                    status: "已录用",
+                    abstract: "药学领域研究论文。",
+                    files: [
+                        {name: "录用通知", file: "Xiaoxiao Zheng et al.-Acta Pharmaceutica Acceptance Letter.pdf", type: "pdf"}
+                    ]
+                },
+                {
+                    title: "Frontiers in Oncology 期刊论文",
+                    type: "SCI 期刊",
+                    date: "待定",
+                    authors: "Yang et al.（含杨尚毅）",
+                    status: "已录用",
+                    abstract: "肿瘤学前沿研究论文。",
+                    files: [
+                        {name: "录用通知", file: "Yang et al. – Certificate of Acceptance – Frontiers in Oncology.pdf", type: "pdf"}
+                    ]
+                },
+
+                // 其他论文
+                {
+                    title: "The application of m6A-RNA in embryonic stem cells",
+                    type: "SCI (IF: 3.5) JCR 2区",
+                    date: "在投",
+                    authors: "指导老师: 项荣武",
+                    status: "在投",
+                    abstract: "This review examines the role of m6A-RNA modification in embryonic stem cells (ESCs), focusing on its regulation of self-renewal, differentiation, and apoptosis through impacts on RNA stability, translation, and splicing.",
+                    files: []
+                },
+                {
+                    title: "A New Solution to the Formulation of Traditional Chinese Medicine Coffee under the Perspective of \"Nine Physical Qualities\"",
+                    type: "SCI (IF: 2.2) JCR 3区",
+                    date: "在投",
+                    authors: "指导老师: 范广伟",
+                    status: "在投",
+                    abstract: "Developed personalized TCM herbal coffee formulas by applying computational algorithms to the \"Food & Medicine Homology\" list, supporting integrative and precision health beverage innovation.",
+                    files: []
+                }
+            ],
+
+            patents: [
+                // 实用新型专利
+                {
+                    title: "一种热敷药包辅助热敷器",
+                    type: "实用新型专利",
+                    date: "2024",
+                    authors: "发明作者排名: 一作",
+                    abstract: "专利号: ZL 2023 2 3108773.5",
+                    files: [
+                        {name: "查看专利证书", file: "专利授权-一种热敷药包辅助热敷器-实用新型专利证书-20241022.pdf", type: "pdf"}
+                    ]
+                },
+                {
+                    title: "一种用于纳米促渗的纳米晶片",
+                    type: "实用新型专利",
+                    date: "2025",
+                    authors: "发明作者排名: 三作",
+                    abstract: "专利号: ZL 2024 2 0598631.7",
+                    files: [
+                        {name: "查看专利证书", file: "2024-0823-SY067-实用新型专利证书.pdf", type: "pdf"},
+                        {name: "专利文档", file: "一种用于纳米促渗的纳米晶片-宗改3.26提交版本.doc", type: "doc"}
+                    ]
+                },
+                {
+                    title: "一种血液检测装置",
+                    type: "实用新型专利",
+                    date: "2025",
+                    authors: "发明作者排名: 五作",
+                    abstract: "专利号: ZL 2024 2 0608815.7",
+                    files: [
+                        {name: "查看专利证书", file: "2024-1604-SY125-实用新型专利证书.pdf", type: "pdf"}
+                    ]
+                },
+                {
+                    title: "一种雾化装置",
+                    type: "实用新型专利",
+                    date: "2025",
+                    authors: "发明作者排名: 八作",
+                    abstract: "专利号: ZL 2024 2 1080291.5",
+                    files: [
+                        {name: "查看专利证书", file: "2024-0919-SY074-实用新型专利证书-一种雾化装置.pdf", type: "pdf"}
+                    ]
+                },
+                {
+                    title: "一种咖啡豆粉碎机",
+                    type: "实用新型专利",
+                    date: "2024",
+                    authors: "发明作者排名: 三作",
+                    abstract: "专利申请号: 202420585753.2",
+                    files: [
+                        {name: "受理通知书", file: "咖啡粉碎机专利.pdf", type: "pdf"}
+                    ]
+                },
+
+                // 发明专利
+                {
+                    title: "一种CAR-T细胞扩增配制装置及CAR-T产品制备系统",
+                    type: "发明专利",
+                    date: "2024",
+                    authors: "发明作者排名: 九作",
+                    abstract: "专利申请号: 202410800980.7",
+                    files: [
+                        {name: "受理通知书", file: "一种CAR-T细胞扩增配制装置及CAR-T产品制备系统-专利申请受理通知书.pdf", type: "pdf"}
+                    ]
+                },
+                {
+                    title: "一种中药药渣回收处理装置",
+                    type: "发明专利",
+                    date: "2024",
+                    authors: "发明作者排名: 三作",
+                    abstract: "专利申请号: 202410445322.0",
+                    files: [
+                        {name: "受理通知书", file: "一种中药药渣回收处理装置-专利申请受理通知书.pdf", type: "pdf"}
+                    ]
+                }
+            ],
+
+            copyrights: [
+                {
+                    title: "中药精萃生产加工运维系统",
+                    type: "软件著作权",
+                    date: "2023",
+                    authors: "软件著作权",
+                    files: [
+                        {name: "查看证书", file: "中药精萃生产加工运维系统.png", type: "image"}
+                    ]
+                },
+                {
+                    title: "社区居家养老一键通服务系统",
+                    type: "软件著作权",
+                    date: "2023",
+                    authors: "软件著作权",
+                    files: [
+                        {name: "查看证书", file: "社区养老一键通服务系统.png", type: "image"}
+                    ]
+                }
+            ],
+
+            works: [
+                {
+                    title: "携梦盈香，本草药咖，药效啡",
+                    type: "作品著作权",
+                    date: "2024",
+                    authors: "杨尚毅, 郑潇潇, 钟介眉",
+                    files: [
+                        {name: "查看证书", file: "作品著作权1.png", type: "image"}
+                    ]
+                },
+                {
+                    title: "TRIZ理论中药咖啡策划案",
+                    type: "作品著作权",
+                    date: "2024",
+                    authors: "杨尚毅, 郑潇潇, 钟介眉",
+                    files: [
+                        {name: "查看证书", file: "作品著作权2.png", type: "image"}
+                    ]
+                }
+            ]
+        };
+
+        // 动态生成论文专利内容
+        function generatePublications() {
+            // 生成论文
+            const papersList = document.querySelector('#papers .publication-list');
+            if (papersList) {
+                publicationsData.papers.forEach(paper => {
+                    const item = document.createElement('div');
+                    item.className = 'publication-item';
+
+                    item.innerHTML = `
+                        <h3>${paper.title}</h3>
+                        <div class="publication-meta">
+                            <span class="publication-type">${paper.type} ${paper.status ? `(${paper.status})` : ''}</span>
+                            <span class="publication-date">${paper.date}</span>
+                        </div>
+                        <p class="publication-authors">${paper.authors}</p>
+                        <p class="publication-abstract">${paper.abstract}</p>
+                        <div class="publication-links">
+                            ${paper.files && paper.files.length > 0 ? paper.files.map(file =>
+                                `<a href="#" class="file-link" data-file="${getFilePath(file.file)}" data-type="${file.type}">
+                                    <i class="fas ${getFileIcon(file.type)}"></i>${file.name}
+                                </a>`
+                            ).join('') : ''}
+                        </div>
+                    `;
+
+                    papersList.appendChild(item);
+                });
+            }
+
+            // 生成专利
+            const patentsList = document.querySelector('#patents .publication-list');
+            if (patentsList) {
+                publicationsData.patents.forEach(patent => {
+                    const item = document.createElement('div');
+                    item.className = 'publication-item';
+
+                    let filesHTML = '';
+                    if (patent.files && patent.files.length > 0) {
+                        filesHTML = patent.files.map(file =>
+                            `<a href="#" class="file-link" data-file="${getFilePath(file.file)}" data-type="${file.type}">
+                                <i class="fas ${getFileIcon(file.type)}"></i>${file.name}
+                            </a>`
+                        ).join('');
+                    }
+
+                    item.innerHTML = `
+                        <h3>${patent.title}</h3>
+                        <div class="publication-meta">
+                            <span class="publication-type">${patent.type}</span>
+                            <span class="publication-date">${patent.date}</span>
+                        </div>
+                        <p class="publication-authors">${patent.authors}</p>
+                        <p class="publication-abstract">${patent.abstract}</p>
+                        <div class="publication-links">
+                            ${filesHTML}
+                        </div>
+                    `;
+
+                    patentsList.appendChild(item);
+                });
+            }
+
+            // 生成软件著作权
+            const copyrightsList = document.querySelector('#copyrights .publication-list');
+            if (copyrightsList) {
+                publicationsData.copyrights.forEach(copyright => {
+                    const item = document.createElement('div');
+                    item.className = 'publication-item';
+
+                    let filesHTML = '';
+                    if (copyright.files && copyright.files.length > 0) {
+                        filesHTML = copyright.files.map(file =>
+                            `<a href="#" class="file-link" data-file="${getFilePath(file.file)}" data-type="${file.type}">
+                                <i class="fas ${getFileIcon(file.type)}"></i>${file.name}
+                            </a>`
+                        ).join('');
+                    }
+
+                    item.innerHTML = `
+                        <h3>${copyright.title}</h3>
+                        <div class="publication-meta">
+                            <span class="publication-type">${copyright.type}</span>
+                            <span class="publication-date">${copyright.date}</span>
+                        </div>
+                        <p class="publication-authors">${copyright.authors}</p>
+                        <div class="publication-links">
+                            ${filesHTML}
+                        </div>
+                    `;
+
+                    copyrightsList.appendChild(item);
+                });
+            }
+
+            // 生成作品著作权
+            const worksList = document.querySelector('#works .publication-list');
+            if (worksList) {
+                publicationsData.works.forEach(work => {
+                    const item = document.createElement('div');
+                    item.className = 'publication-item';
+
+                    let filesHTML = '';
+                    if (work.files && work.files.length > 0) {
+                        filesHTML = work.files.map(file =>
+                            `<a href="#" class="file-link" data-file="${getFilePath(file.file)}" data-type="${file.type}">
+                                <i class="fas ${getFileIcon(file.type)}"></i>${file.name}
+                            </a>`
+                        ).join('');
+                    }
+
+                    item.innerHTML = `
+                        <h3>${work.title}</h3>
+                        <div class="publication-meta">
+                            <span class="publication-type">${work.type}</span>
+                            <span class="publication-date">${work.date}</span>
+                        </div>
+                        <p class="publication-authors">${work.authors}</p>
+                        <div class="publication-links">
+                            ${filesHTML}
+                        </div>
+                    `;
+
+                    worksList.appendChild(item);
+                });
+            }
+        }
+
+        // 项目数据
+        const projectsData = [
+            {
+                title: "数据可视化平台",
+                description: "基于Streamlit构建的数据可视化应用，支持多种图表类型和数据格式，提供交互式数据分析功能。",
+                icon: "fas fa-chart-bar",
+                category: "web",
+                links: [
+                    {text: "访问应用", url: "https://picture-visual-lcexqiem4zjqm5tkeb32g6.streamlit.app/", type: "primary"}
+                ]
+            },
+            {
+                title: "个人Wiki知识库",
+                description: "使用Vue.js构建的个人知识管理系统，集成文档管理、标签分类和全文搜索功能。",
+                icon: "fas fa-book",
+                category: "web",
+                links: [
+                    {text: "查看源码", url: "https://github.com/YSY-1026/personal-Wiki", type: "secondary"}
+                ]
+            },
+            {
+                title: "生物信息学分析工具",
+                description: "开发用于基因表达数据分析的Python工具包，包含数据预处理、差异分析和可视化模块。",
+                icon: "fas fa-dna",
+                category: "bioinformatics",
+                links: [
+                    {text: "查看项目", url: "#", type: "secondary"}
+                ]
+            },
+
+            {
+                title: "Model数据可视化平台",
+                description: "基于Streamlit构建的数据可视化应用，支持多种图表类型和数据格式，提供交互式数据分析功能。包含完整的模型数据和图片资源库。",
+                icon: "fas fa-chart-bar",
+                category: "web",
+                links: [
+                    {text: "访问应用", url: "https://picture-visual-lcexqiem4zjqm5tkeb32g6.streamlit.app/", type: "primary"},
+                    {text: "查看源码", url: "https://github.com/YSY-1026", type: "secondary"}
+                ]
+            },
+            {
+                title: "AIVC模拟趣味平台",
+                description: "创新的AI虚拟角色模拟平台，提供趣味互动体验。整合了先进的AI技术和用户友好的界面设计。",
+                icon: "fas fa-robot",
+                category: "web",
+                links: [
+                    {text: "访问应用", url: "https://mainpy-geezzyntj9ch4s66rvhr9w.streamlit.app/", type: "primary"},
+                    {text: "技术文档", url: "#", type: "secondary"}
+                ]
+            },
+            {
+                title: "HP商业信息云分析平台",
+                description: "为惠普业务设计的商业信息云分析平台，提供数据可视化、业务分析和决策支持功能。支持多维度数据分析和报表生成。",
+                icon: "fas fa-cloud",
+                category: "web",
+                links: [
+                    {text: "访问平台", url: "http://syphu-china-hp-bussinessmodel-vhm8a5dcalrr5wjjinujrr.streamlit.app/", type: "primary"},
+                    {text: "业务分析", url: "#", type: "secondary"}
+                ]
+            },
+            {
+                title: "HP问卷调研平台",
+                description: "专业的在线问卷调研平台，支持多种题型设计、数据收集和统计分析。为iGEM项目提供数据支持。",
+                icon: "fas fa-poll",
+                category: "web",
+                links: [
+                    {text: "访问平台", url: "https://questionire-hp-syphu-igem-bmpw6tnqycvoytukmuqfhk.streamlit.app/", type: "primary"},
+                    {text: "调研案例", url: "#", type: "secondary"}
+                ]
+            },
+            {
+                title: "虚拟实验平台",
+                description: "创新的虚拟实验环境，支持在线实验操作、数据记录和结果分析。为科研教学提供便捷的实验模拟工具。",
+                icon: "fas fa-vial",
+                category: "web",
+                links: [
+                    {text: "访问平台", url: "https://experiment-platform-ulp2vhzlm7xcpyh3bp2rvw.streamlit.app/", type: "primary"},
+                    {text: "实验手册", url: "#", type: "secondary"}
+                ]
+            }
+        ];
+
+        // 动态生成项目卡片
+        function generateProjects() {
+            const projectsGrid = document.querySelector('.projects-grid');
+
+            if (!projectsGrid) return;
+
+            projectsData.forEach(project => {
+                const card = document.createElement('div');
+                card.className = 'project-card';
+
+                const linksHTML = project.links.map(link =>
+                    `<a href="${link.url}" class="btn ${link.type === 'primary' ? 'btn-primary' : 'btn-secondary'}" ${link.url !== '#' ? 'target="_blank"' : ''}>${link.text}</a>`
+                ).join('');
+
+                card.innerHTML = `
+                    <div class="project-image">
+                        <i class="${project.icon}"></i>
+                    </div>
+                    <div class="project-content">
+                        <h3>${project.title}</h3>
+                        <p class="project-description">${project.description}</p>
+                        <div class="project-links">
+                            ${linksHTML}
+                        </div>
+                    </div>
+                `;
+
+                projectsGrid.appendChild(card);
+            });
+        }
+
+        // 荣誉奖项数据
+        const awardsData = [
+            {
+                title: "中国商业统计学会 CRA 证书",
+                date: "2024年11月",
+                description: "在\"第十五届全国大学生市场调查与分析大赛本科组理论知识赛\"网络考试中，成绩优异（考分在全国25.6万名考生中位列前10名）。",
+                category: "national",
+                files: [
+                    {name: "查看证书", file: "CRA证书.pdf", type: "pdf"}
+                ]
+            },
+            {
+                title: "美国大学生数学建模竞赛 M奖",
+                date: "2024年",
+                description: "国际一等奖，在数学建模竞赛中表现优异。",
+                category: "international",
+                files: [
+                    {name: "查看证书", file: "美赛M-2400293.pdf", type: "pdf"}
+                ]
+            },
+            {
+                title: "药学院科研之星",
+                date: "2023年",
+                description: "在沈阳药科大学药学院2023年\"璀璨之星\"评选中，荣获科研之星称号。",
+                category: "university",
+                files: [
+                    {name: "查看证书", file: "药院科研之星.jpg", type: "image"}
+                ]
+            },
+            {
+                title: "浙江大学衢州两院优秀营员",
+                date: "2024年",
+                description: "在浙大衢州\"两院\"2024年\"求是青苗\"暑期研学夏令营中表现突出，获优秀营员奖。",
+                category: "provincial",
+                files: [
+                    {name: "查看证书", file: "衢州两院优秀营员.jpg", type: "image"}
+                ]
+            },
+            {
+                title: "英语四级证书",
+                date: "2023年",
+                description: "全国大学英语四级考试通过证书。",
+                category: "national",
+                files: [
+                    {name: "查看证书", file: "CET4_202306_210142231100619_1.pptx", type: "doc"}
+                ]
+            },
+            {
+                title: "培训证书",
+                date: "2023年",
+                description: "各类培训和技能证书。",
+                category: "other",
+                files: [
+                    {name: "查看证书", file: "培训证书  杨尚毅.png", type: "image"}
+                ]
+            },
+            {
+                title: "作品著作权",
+                date: "2023年",
+                description: "证书样本和模板。",
+                category: "other",
+                files: [
+                    {name: "查看证书", file: "杨尚毅-样本.pdf", type: "pdf"},
+                    {name: "查看证书2", file: "杨尚毅-样本2.pdf", type: "pdf"}
+                ]
+            }
+        ];
+
+        // 动态生成荣誉奖项
+        function generateAwards() {
+            const awardsGrid = document.querySelector('.awards-grid');
+
+            if (!awardsGrid) return;
+
+            awardsData.forEach(award => {
+                const card = document.createElement('div');
+                card.className = `award-card ${award.category}`;
+
+                let filesHTML = '';
+                if (award.files && award.files.length > 0) {
+                    filesHTML = award.files.map(file =>
+                        `<a href="#" class="file-link" data-file="${getFilePath(file.file)}" data-type="${file.type}">
+                            <i class="fas ${getFileIcon(file.type)}"></i>${file.name}
+                        </a>`
+                    ).join('');
+                }
+
+                card.innerHTML = `
+                    <div class="award-image">
+                        <i class="fas fa-trophy"></i>
+                    </div>
+                    <div class="award-content">
+                        <h3>${award.title}</h3>
+                        <p class="award-date">${award.date}</p>
+                        <p class="award-description">${award.description}</p>
+                        <div class="award-links">
+                            ${filesHTML}
+                        </div>
+                    </div>
+                `;
+
+                awardsGrid.appendChild(card);
+            });
+        }
+
+        // 校园活动数据
+        const activitiesData = [
+            {
+                title: "SCB & seasonal mailbox",
+                position: "社长",
+                date: "2023-2024",
+                description: "领导社团组织各类学术和文化活动，促进校园文化交流。"
+            },
+            {
+                title: "默沙东精英联盟",
+                position: "网技部部长",
+                date: "2023",
+                description: "负责网络技术部门工作，组织技术培训和项目开发。"
+            },
+            {
+                title: "耀友汇",
+                position: "策划部部长",
+                date: "2022-2023",
+                description: "策划和组织各类校园活动，提升学生综合素质。"
+            },
+            {
+                title: "iGEM",
+                position: "副社长",
+                date: "2023-2024",
+                description: "协助社长管理社团事务，组织国际基因工程机器大赛参赛工作。"
+            },
+            {
+                title: "大连市待梦归医疗科技有限公司",
+                position: "董事长",
+                date: "2023-至今",
+                description: "创办医疗科技公司，致力于医疗技术创新和产业化。"
+            },
+            {
+                title: "沈阳市药大基因咨询服务有限公司",
+                position: "销售部部长",
+                date: "2023-至今",
+                description: "负责公司销售业务，拓展基因咨询市场。"
+            },
+            {
+                title: "Robotex世界机器人大会",
+                position: "志愿者",
+                date: "2023",
+                description: "参与世界机器人大会志愿服务工作，支持科技活动举办。"
+            },
+            {
+                title: "内蒙古创新教育学会",
+                position: "学生荣誉会员",
+                date: "2023-至今",
+                description: "作为学生荣誉会员参与创新教育活动和研究。"
+            },
+            {
+                title: "中国化学会",
+                position: "学生会员",
+                date: "2023-至今",
+                description: "作为学生会员参与化学学术活动和交流。"
+            }
+        ];
+
+        // 动态生成校园活动
+        function generateActivities() {
+            const activitiesTimeline = document.querySelector('.activities-timeline');
+
+            if (!activitiesTimeline) return;
+
+            activitiesData.forEach(activity => {
+                const item = document.createElement('div');
+                item.className = 'activity-item';
+
+                item.innerHTML = `
+                    <div class="activity-header">
+                        <div class="activity-title">
+                            <h3>${activity.title}</h3>
+                            <p class="activity-position">${activity.position}</p>
+                        </div>
+                        <div class="activity-date">${activity.date}</div>
+                    </div>
+                    <div class="activity-description">
+                        <p>${activity.description}</p>
+                    </div>
+                `;
+
+                activitiesTimeline.appendChild(item);
+            });
+        }
+
+        // 获取文件类型图标
+        function getFileIcon(fileType) {
+            switch(fileType) {
+                case 'pdf': return 'fa-file-pdf';
+                case 'doc': case 'docx': return 'fa-file-word';
+                case 'image': return 'fa-file-image';
+                case 'link': return 'fa-external-link-alt';
+                default: return 'fa-file';
+            }
+        }
+
+        // 初始化模态框功能
+        function initModal() {
+            const modal = document.getElementById('file-preview-modal');
+            const closeBtn = document.querySelector('.close-btn');
+            const modalPreview = document.getElementById('modal-preview');
+            const modalTitle = document.getElementById('modal-title');
+
+            // 为所有文件链接添加点击事件
+            document.addEventListener('click', function(e) {
+                if (e.target.classList.contains('file-link') || e.target.closest('.file-link')) {
+                    e.preventDefault();
+
+                    const fileLink = e.target.classList.contains('file-link') ? e.target : e.target.closest('.file-link');
+                    const filePath = fileLink.getAttribute('data-file');
+                    const fileType = fileLink.getAttribute('data-type');
+                    const fileName = filePath.split('/').pop().split('\\').pop();
+
+                    modalTitle.textContent = fileName;
+
+                    // 根据文件类型显示不同的预览内容
+                    if (fileType === 'image') {
+                        modalPreview.innerHTML = `<img src="${filePath}" alt="${fileName}">`;
+                    } else if (fileType === 'pdf') {
+                        modalPreview.innerHTML = `<iframe src="${filePath}" frameborder="0"></iframe>`;
+                    } else if (fileType === 'doc' || fileType === 'docx') {
+                        modalPreview.innerHTML = `
+                            <div class="file-not-supported">
+                                <i class="fas fa-file-word"></i>
+                                <h3>Word文档预览</h3>
+                                <p>浏览器无法直接预览Word文档，请下载后查看</p>
+                                <a href="${filePath}" class="btn btn-primary" download>下载文档</a>
+                            </div>
+                        `;
+                    } else if (fileType === 'link') {
+                        modalPreview.innerHTML = `
+                            <div class="file-not-supported">
+                                <i class="fas fa-external-link-alt"></i>
+                                <h3>外部链接</h3>
+                                <p>这是一个外部链接，将在新窗口中打开</p>
+                                <a href="${filePath}" class="btn btn-primary" target="_blank">打开链接</a>
+                            </div>
+                        `;
+                    } else {
+                        modalPreview.innerHTML = `
+                            <div class="file-not-supported">
+                                <i class="fas fa-file"></i>
+                                <h3>文件预览</h3>
+                                <p>此文件类型无法在浏览器中预览</p>
+                                <a href="${filePath}" class="btn btn-primary" download>下载文件</a>
+                            </div>
+                        `;
+                    }
+
+                    modal.style.display = 'flex';
+                }
+            });
+
+            // 关闭模态框
+            closeBtn.addEventListener('click', function() {
+                modal.style.display = 'none';
+            });
+
+            // 点击模态框外部关闭
+            window.addEventListener('click', function(event) {
+                if (event.target === modal) {
+                    modal.style.display = 'none';
+                }
+            });
+
+            // ESC键关闭模态框
+            document.addEventListener('keydown', function(event) {
+                if (event.key === 'Escape') {
+                    modal.style.display = 'none';
+                }
+            });
+        }
+
+        // 添加滚动动画
+        function addScrollAnimations() {
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('animate-in');
+                    }
+                });
+            }, observerOptions);
+
+            // 观察所有卡片和部分标题
+            document.querySelectorAll('.about-card, .skill-card, .competition-card, .publication-item, .project-card, .award-card, .activity-item, .section-title').forEach(el => {
+                observer.observe(el);
+            });
+        }
+    </script>
+</body>
+</html>
